@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>怠惰的小胖狗</title>
+  <title>懒惰的小胖狗</title>
   
-  
+  <subtitle>分享是一种力量</subtitle>
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
@@ -23,12 +23,13 @@
     <published>2020-10-12T13:12:52.000Z</published>
     <updated>2020-10-15T10:05:19.958Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Markdown-用法"><a href="#Markdown-用法" class="headerlink" title="Markdown 用法"></a>Markdown 用法</h1><p>写在前面，在写blog忘记的时候可以回来看看 :smile:</p><p>[Toc]</p><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h2><br>标题是划分文章整体结构的最好方法，整洁的标题使得文章更为整洁，标题等级越小，则字号越大<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一号标题 #</span><br></pre></td></tr></table></figure><h1 id="一号标题"><a href="#一号标题" class="headerlink" title="一号标题"></a>一号标题</h1><p>一号标题主要用于整篇文章的题目</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二号标题 ##</span><br></pre></td></tr></table></figure><h2 id="二号标题"><a href="#二号标题" class="headerlink" title="二号标题"></a>二号标题</h2><p>正文的题目开始使用的标题大小</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">三号标题 ###</span><br></pre></td></tr></table></figure><h3 id="三号标题"><a href="#三号标题" class="headerlink" title="三号标题"></a>三号标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">四号标题 ####</span><br></pre></td></tr></table></figure><h4 id="四号标题"><a href="#四号标题" class="headerlink" title="四号标题"></a>四号标题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">五号标题 #####</span><br></pre></td></tr></table></figure><h5 id="五号标题"><a href="#五号标题" class="headerlink" title="五号标题"></a>五号标题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..............</span><br></pre></td></tr></table></figure><h2 id="2-分割线"><a href="#2-分割线" class="headerlink" title="2. 分割线"></a>2. 分割线</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure><hr><h2 id="3-斜体和粗体"><a href="#3-斜体和粗体" class="headerlink" title="3. 斜体和粗体"></a>3. 斜体和粗体</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 斜体 *</span><br><span class="line">** 粗体 **</span><br><span class="line">*** 斜体 ***</span><br><span class="line">~~要删除的文字~~</span><br></pre></td></tr></table></figure><p><em>斜体</em><br><strong>粗体</strong><br><strong><em>斜体+粗体</em></strong><br><del>要删除的文字</del></p><h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;:........</span><br></pre></td></tr></table></figure><blockquote><p>:这是一个引用</p></blockquote><h2 id="5-表格"><a href="#5-表格" class="headerlink" title="5. 表格"></a>5. 表格</h2><p>Markdown支持有序列表和无序列表，任何表格在建立的时候，序号和内容之间都应该有一个空格</p><h3 id="5-1-无序表格"><a href="#5-1-无序表格" class="headerlink" title="5.1 无序表格"></a>5.1 无序表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br></pre></td></tr></table></figure><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><h3 id="5-2-有序表格"><a href="#5-2-有序表格" class="headerlink" title="5.2 有序表格"></a>5.2 有序表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 列表内容</span><br><span class="line">2. 列表内容</span><br><span class="line">3. 列表内容</span><br></pre></td></tr></table></figure><ol><li>列表内容</li><li>列表内容</li><li>列表内容</li></ol><h3 id="5-3-列表嵌套"><a href="#5-3-列表嵌套" class="headerlink" title="5.3 列表嵌套"></a>5.3 列表嵌套</h3><p>列表上一级与下一级之间敲三个空格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* 一级无序列表内容</span><br><span class="line"></span><br><span class="line">   * 二级无序列表内容</span><br><span class="line">   * 二级无序列表内容</span><br><span class="line">   * 二级无序列表内容</span><br></pre></td></tr></table></figure><ul><li><p>一级无序列表内容</p><ul><li>二级无序列表内容</li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul></li></ul><p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符</p><h2 id="6-表格"><a href="#6-表格" class="headerlink" title="6. 表格"></a>6. 表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br></pre></td></tr></table></figure><p>表格确实有点麻烦:dizzy_face:<br>表头|表头|表头<br>—|:–:|—:<br>内容|内容|内容<br>内容|内容|内容</p><h2 id="7-代码"><a href="#7-代码" class="headerlink" title="7. 代码"></a>7. 代码</h2><h3 id="7-1-多行代码"><a href="#7-1-多行代码" class="headerlink" title="7.1 多行代码"></a>7.1 多行代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#96;&#96;&#96;</span><br><span class="line">### 7.2 单行代码</span><br></pre></td></tr></table></figure><p>这里是<code>xxxxlc</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#96;xxxxlc&#96;</span><br><span class="line"></span><br><span class="line">## 8. 超链接</span><br><span class="line">### 8.1 页内跳转</span><br></pre></td></tr></table></figure><p><a href="#jump">点击跳转</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[点击跳转](#jump)</span><br></pre></td></tr></table></figure><p><span id="jump">跳转此处<span></span></span></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;jump&quot;&gt;跳转此处&lt;span&gt;</span><br><span class="line"></span><br><span class="line">### 8.2 页外跳转</span><br></pre></td></tr></table></figure><p><a href="超链接">超链接名</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[Github](https:&#x2F;&#x2F;github.com&#x2F;)</span><br><span class="line"></span><br><span class="line">### 8.3 参考式超链接</span><br><span class="line">参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：</span><br></pre></td></tr></table></figure><p>This is <a href="http://example.com/" target="_blank" rel="noopener" title="Optional Title Here">an example</a> reference-style link.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">接着，在文件的任意处，你可以把这个标记的链接内容定义出来:</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 8.4 自动链接</span><br><span class="line">Markdown 还支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。</span><br></pre></td></tr></table></figure><p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;https:&#x2F;&#x2F;github.com&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">## 9 图片</span><br><span class="line">### 9.1 行内式图片语法</span><br></pre></td></tr></table></figure><p><img src="/2020/10/12/markdown/%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84" alt="图片的代替文字"></p><p>```</p><p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a><br><a href="https://zhuanlan.zhihu.com/p/99319314" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/99319314</a></p><p><img src="https://raw.githubusercontent.com/xxxxlc/image/main/picture/test.jpg" alt="test"></p>]]></content>
-    
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Markdown-用法&quot;&gt;&lt;a href=&quot;#Markdown-用法&quot; class=&quot;headerlink&quot; title=&quot;Markdown 用法&quot;&gt;&lt;/a&gt;Markdown 用法&lt;/h1&gt;&lt;p&gt;写在前面，在写blog忘记的时候可以回来看看 :smile:&lt;/p&gt;</summary>
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Markdown-用法&quot;&gt;&lt;a href=&quot;#Markdown-用法&quot; class=&quot;headerlink&quot; title=&quot;Markdown 用法&quot;&gt;&lt;/a&gt;Markdown 用法&lt;/h1&gt;&lt;p&gt;写在前面，在写blog忘记的时候可以回来看看</summary>
+        
       
     
     
@@ -38,8 +39,8 @@
   
   <entry>
     <title>hexo具体用法</title>
-    <link href="https://xxxxlc.github.io/2020/10/12/hexo%E5%85%B7%E4%BD%93%E7%94%A8%E6%B3%95/"/>
-    <id>https://xxxxlc.github.io/2020/10/12/hexo%E5%85%B7%E4%BD%93%E7%94%A8%E6%B3%95/</id>
+    <link href="https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/"/>
+    <id>https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/</id>
     <published>2020-10-12T13:10:29.000Z</published>
     <updated>2020-10-12T13:10:29.913Z</updated>
     
@@ -51,19 +52,20 @@
   
   <entry>
     <title>when I firstly have blog</title>
-    <link href="https://xxxxlc.github.io/2020/07/16/when-I-firstly-have-blog/"/>
-    <id>https://xxxxlc.github.io/2020/07/16/when-I-firstly-have-blog/</id>
+    <link href="https://xxxxlc.github.io/2020/07/16/when-i-firstly-have-blog/"/>
+    <id>https://xxxxlc.github.io/2020/07/16/when-i-firstly-have-blog/</id>
     <published>2020-07-16T13:02:03.000Z</published>
     <updated>2020-10-11T02:32:49.127Z</updated>
     
-    <content type="html"><![CDATA[<p>#写给现在想编程的我</p><p>始于足下</p>]]></content>
-    
     
       
       
+        
+        
     <summary type="html">&lt;p&gt;#写给现在想编程的我&lt;/p&gt;
 &lt;p&gt;始于足下&lt;/p&gt;
 </summary>
+        
       
     
     
@@ -78,12 +80,13 @@
     <published>2020-07-14T02:18:43.961Z</published>
     <updated>2020-07-14T02:18:43.961Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.</summary>
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a</summary>
+        
       
     
     
