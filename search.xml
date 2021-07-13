@@ -43,13 +43,19 @@
     
     
     <entry>
-      <title>when I firstly have blog</title>
-      <link href="/2020/07/16/when-i-firstly-have-blog/"/>
-      <url>/2020/07/16/when-i-firstly-have-blog/</url>
+      <title>Start !!!</title>
+      <link href="/2020/07/16/start/"/>
+      <url>/2020/07/16/start/</url>
       
-        <content type="html"><![CDATA[<p>#写给现在想编程的我</p><p>始于足下</p>]]></content>
+        <content type="html"><![CDATA[<p>始于足下</p><p><img src="/2020/07/16/start/start.jpg" alt="start"></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> mood </tag>
+            
+        </tags>
       
     </entry>
     

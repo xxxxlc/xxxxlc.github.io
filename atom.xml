@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>懒惰的小胖狗</title>
+  <title>xxxxlc</title>
   
   <subtitle>分享是一种力量</subtitle>
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
@@ -75,25 +75,26 @@
   </entry>
   
   <entry>
-    <title>when I firstly have blog</title>
-    <link href="https://xxxxlc.github.io/2020/07/16/when-i-firstly-have-blog/"/>
-    <id>https://xxxxlc.github.io/2020/07/16/when-i-firstly-have-blog/</id>
+    <title>Start !!!</title>
+    <link href="https://xxxxlc.github.io/2020/07/16/start/"/>
+    <id>https://xxxxlc.github.io/2020/07/16/start/</id>
     <published>2020-07-16T13:02:03.000Z</published>
-    <updated>2020-10-11T02:32:49.127Z</updated>
+    <updated>2021-07-13T14:08:18.344Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;#写给现在想编程的我&lt;/p&gt;
-&lt;p&gt;始于足下&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;始于足下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/07/16/start/start.jpg&quot;</summary>
         
       
     
     
     
+    
+    <category term="mood" scheme="https://xxxxlc.github.io/tags/mood/"/>
     
   </entry>
   
