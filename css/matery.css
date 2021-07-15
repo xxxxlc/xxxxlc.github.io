@@ -35,10 +35,8 @@
 
 body {
     background-color: #eaeaea;
-    background: linear-gradient(60deg, rgba(224,255,125, 0.5) 5%, rgba(0,228,255,0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px;
-    background-attachment: fixed;
     margin: 0;
-    color: #7F95D1;
+    color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -243,12 +241,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #da70d6 0%, #6109a0 100%);
-    opacity: 0.8
+    background-image: linear-gradient(to right, #306ebf 0%, #b81f97 100%);
 }
 
 .text-color {
-    color: #4f6d5e !important;
+    color: #0f9d58 !important;
 }
 
 .white-color {
