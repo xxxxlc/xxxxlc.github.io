@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2020-07-14T02:18:43.961Z</updated>
+  <updated>2021-07-21T06:45:02.439Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MATLAB Coding style</title>
+    <link href="https://xxxxlc.github.io/2021/07/17/matlab-coding-style/"/>
+    <id>https://xxxxlc.github.io/2021/07/17/matlab-coding-style/</id>
+    <published>2021-07-17T11:02:02.000Z</published>
+    <updated>2021-07-21T06:45:02.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;MATLAB</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MATLAB" scheme="https://xxxxlc.github.io/tags/MATLAB/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -42,7 +65,7 @@
     <link href="https://xxxxlc.github.io/2020/10/12/markdown/"/>
     <id>https://xxxxlc.github.io/2020/10/12/markdown/</id>
     <published>2020-10-12T13:12:52.000Z</published>
-    <updated>2020-10-15T10:05:19.958Z</updated>
+    <updated>2021-07-20T13:48:48.576Z</updated>
     
     
       
@@ -52,7 +75,7 @@
     <summary type="html">&lt;h1&gt;Markdown 用法&lt;/h1&gt;
 &lt;p&gt;写在前面，在写blog忘记的时候可以回来看看 😄&lt;/p&gt;
 &lt;p&gt;[Toc]&lt;/p&gt;
-&lt;h2 id=&quot;1-标题&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#1-标题&quot;&gt;¶&lt;/a&gt;1.</summary>
+&lt;h2 id=&quot;1-标题&quot;&gt;1.</summary>
         
       
     

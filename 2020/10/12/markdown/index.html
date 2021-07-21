@@ -366,8 +366,13 @@
     }
 
     .toc-widget {
+        /* width: 345px;
+        padding-left: 20px; */
         width: 345px;
         padding-left: 20px;
+        background-color: rgba(63, 50, 182, 0.7);
+        border-radius: 20px;
+        box-shadow: 0 10px 35px 2px rgba(31, 22, 153, 0.15), 0 5px 15px rgba(46, 187, 27, 0.07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -488,26 +493,26 @@
                 <h1>Markdown 用法</h1>
 <p>写在前面，在写blog忘记的时候可以回来看看 😄</p>
 <p>[Toc]</p>
-<h2 id="1-标题"><a class="header-anchor" href="#1-标题">¶</a>1. 标题</h2>
+<h2 id="1-标题">1. 标题</h2>
 <br>
 标题是划分文章整体结构的最好方法，整洁的标题使得文章更为整洁，标题等级越小，则字号越大
 <pre class="line-numbers language-none"><code class="language-none">一号标题 #<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1>一号标题</h1>
 <p>一号标题主要用于整篇文章的题目</p>
 <pre class="line-numbers language-none"><code class="language-none">二号标题 ##<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="二号标题"><a class="header-anchor" href="#二号标题">¶</a>二号标题</h2>
+<h2 id="二号标题">二号标题</h2>
 <p>正文的题目开始使用的标题大小</p>
 <pre class="line-numbers language-none"><code class="language-none">三号标题 ###<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="三号标题"><a class="header-anchor" href="#三号标题">¶</a>三号标题</h3>
+<h3 id="三号标题">三号标题</h3>
 <pre class="line-numbers language-none"><code class="language-none">四号标题 ####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="四号标题"><a class="header-anchor" href="#四号标题">¶</a>四号标题</h4>
+<h4 id="四号标题">四号标题</h4>
 <pre class="line-numbers language-none"><code class="language-none">五号标题 #####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="五号标题"><a class="header-anchor" href="#五号标题">¶</a>五号标题</h5>
+<h5 id="五号标题">五号标题</h5>
 <pre class="line-numbers language-none"><code class="language-none">..............<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="2-分割线"><a class="header-anchor" href="#2-分割线">¶</a>2. 分割线</h2>
-<h2 id="code￼6"><a class="header-anchor" href="#code￼6">¶</a><pre class="line-numbers language-none"><code class="language-none">---
+<h2 id="2-分割线">2. 分割线</h2>
+<h2 id="code￼6"><pre class="line-numbers language-none"><code class="language-none">---
 ***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></h2>
-<h2 id="3-斜体和粗体"><a class="header-anchor" href="#3-斜体和粗体">¶</a>3. 斜体和粗体</h2>
+<h2 id="3-斜体和粗体">3. 斜体和粗体</h2>
 <pre class="line-numbers language-none"><code class="language-none">* 斜体 *
 ** 粗体 **
 *** 斜体 ***
@@ -516,14 +521,14 @@
 <strong>粗体</strong><br>
 <em><strong>斜体+粗体</strong></em><br>
 <s>要删除的文字</s></p>
-<h2 id="4-引用"><a class="header-anchor" href="#4-引用">¶</a>4. 引用</h2>
+<h2 id="4-引用">4. 引用</h2>
 <pre class="line-numbers language-none"><code class="language-none">&gt;:........<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
 <p>:这是一个引用</p>
 </blockquote>
-<h2 id="5-表格"><a class="header-anchor" href="#5-表格">¶</a>5. 表格</h2>
+<h2 id="5-表格">5. 表格</h2>
 <p>Markdown支持有序列表和无序列表，任何表格在建立的时候，序号和内容之间都应该有一个空格</p>
-<h3 id="5-1-无序表格"><a class="header-anchor" href="#5-1-无序表格">¶</a>5.1 无序表格</h3>
+<h3 id="5-1-无序表格">5.1 无序表格</h3>
 <pre class="line-numbers language-none"><code class="language-none">- 列表内容
 + 列表内容
 * 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -536,7 +541,7 @@
 <ul>
 <li>列表内容</li>
 </ul>
-<h3 id="5-2-有序表格"><a class="header-anchor" href="#5-2-有序表格">¶</a>5.2 有序表格</h3>
+<h3 id="5-2-有序表格">5.2 有序表格</h3>
 <pre class="line-numbers language-none"><code class="language-none">1. 列表内容
 2. 列表内容
 3. 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -545,7 +550,7 @@
 <li>列表内容</li>
 <li>列表内容</li>
 </ol>
-<h3 id="5-3-列表嵌套"><a class="header-anchor" href="#5-3-列表嵌套">¶</a>5.3 列表嵌套</h3>
+<h3 id="5-3-列表嵌套">5.3 列表嵌套</h3>
 <p>列表上一级与下一级之间敲三个空格</p>
 <pre class="line-numbers language-none"><code class="language-none">* 一级无序列表内容
 
@@ -563,7 +568,7 @@
 </li>
 </ul>
 <p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符</p>
-<h2 id="6-表格"><a class="header-anchor" href="#6-表格">¶</a>6. 表格</h2>
+<h2 id="6-表格">6. 表格</h2>
 <pre class="line-numbers language-none"><code class="language-none">表头|表头|表头
 ---|:--:|---:
 内容|内容|内容
@@ -597,8 +602,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="7-代码"><a class="header-anchor" href="#7-代码">¶</a>7. 代码</h2>
-<h3 id="7-1-多行代码"><a class="header-anchor" href="#7-1-多行代码">¶</a>7.1 多行代码</h3>
+<h2 id="7-代码">7. 代码</h2>
+<h3 id="7-1-多行代码">7.1 多行代码</h3>
 <pre class="line-numbers language-none"><code class="language-none">```
 ### 7.2 单行代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里是<code>xxxxlc</code></p>
@@ -865,7 +870,7 @@ https://zhuanlan.zhihu.com/p/99319314
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -877,7 +882,7 @@ https://zhuanlan.zhihu.com/p/99319314
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

@@ -366,8 +366,13 @@
     }
 
     .toc-widget {
+        /* width: 345px;
+        padding-left: 20px; */
         width: 345px;
         padding-left: 20px;
+        background-color: rgba(63, 50, 182, 0.7);
+        border-radius: 20px;
+        box-shadow: 0 10px 35px 2px rgba(31, 22, 153, 0.15), 0 5px 15px rgba(46, 187, 27, 0.07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -734,7 +739,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            headingSelector: 'h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -746,7 +751,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
