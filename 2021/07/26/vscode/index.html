@@ -477,7 +477,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    314
                 </div>
                 
 
@@ -497,7 +497,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1>VSCode使用方法（汇总）</h1>
+<h2 id="VSCode安装">VSCode安装</h2>
+<p>进入VSCode官网进行下载</p>
+<p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Download Visual Studio Code - Mac, Linux, Windows</a></p>
+<p><img src="/2021/07/26/vscode/%E5%9B%BE1.png" alt="图1"></p>
+<p>需要注意：<strong>User Installer</strong>用户安装是只为当前用户安装VSCode，当其他用户登录该电脑时无法使用VSCode；而<strong>System Installe</strong>r系统安装则是可以在C盘根目录安装VSCode，该电脑的所有用户都可使用VSCode。</p>
+<p>在安装过程一路next即可，在安装路径可以选择修改，添加路径<strong>Add PATH</strong>必选。</p>
+<h2 id="VSCode配置Git">VSCode配置Git</h2>
+<ul>
+<li>
+<p>下载<strong>Git</strong>：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a></p>
+</li>
+<li>
+<p>在<strong>Github</strong>：<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>中申请账号，设置个人的用户名以及邮箱</p>
+</li>
+<li>
+<p>在<strong>Git</strong>终端设置远程Github的用户名以及邮箱<img src="/2021/07/26/vscode/图2.png" alt="图2" style="zoom:80%;"></p>
+<pre class="line-numbers language-git" data-language="git"><code class="language-git">git config --global user.name "your name" 
+git config --global user.email "your@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>创建<strong>SSHkey</strong></p>
+<pre class="line-numbers language-git" data-language="git"><code class="language-git">ssh-keygen -t rsa -C "your@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在输入此命令之后，会在本地用户文件生成.ssh文件夹，里面包含id_rsa和id_rsa.pub两个文件。</p>
+</li>
+<li></li>
+</ul>
+<h2 id="VSCode插件推荐">VSCode插件推荐</h2>
+<h2 id="VScode-选择编译器">VScode 选择编译器</h2>
+<p>使用快捷键</p>
+<p><strong>Ctrl + Shift + P</strong></p>
+<p>搜索 <strong>Python: Select Interpreter</strong> 进入<strong>Python</strong>解释器选择界面</p>
+<p>在选择框内选择需要的环境</p>
+<p><img src="/2021/07/26/vscode/image-20210831221818960.png" alt="image-20210831221818960"></p>
+<h2 id="如何打开Setting-json">如何打开Setting.json</h2>
+<p>左下角设置 -&gt;  设置  -&gt; 文本编辑器 -&gt; 在setting.json中编辑</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/4f7d571273f3ba5a201927c8.html">新版vscode如何打开settings.json-百度经验 (baidu.com)</a></p>
+
                 
             </div>
             <hr/>
@@ -739,7 +776,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4, h5, h6'
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -751,7 +788,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4, h5, h6').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

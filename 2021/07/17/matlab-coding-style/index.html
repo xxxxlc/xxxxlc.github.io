@@ -477,7 +477,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.2k
                 </div>
                 
 
@@ -804,8 +804,8 @@ fuction = (param1, param2, ...
 <li>注释写的不好，代码也就不好。</li>
 <li>注释应与代码表达的意思一致，但不仅仅是重述代码。</li>
 <li>注释应该通俗易懂。</li>
-<li>注释通常与所引用的语句具有相同的缩进。</li>
-<li>函数开头的注释应该支持help和lookfor函数。</li>
+<li>注释通常与所引用的语句具有相同的缩进。除了函数的头注释，其余依照<strong>Matlab</strong>自带竖线进行注释。<img src="/2021/07/17/matlab-coding-style/image-20210730093946573.png" alt="image-20210730093946573"></li>
+<li>函数开头的注释应该支持help和<strong>lookfor</strong>函数。</li>
 <li>函数开头注释应该讨论对输入参数的任何特殊要求。</li>
 <li>函数头注释应该描述任何作用。</li>
 <li>一般来说，最后一行函数头注释应该重述函数行，这允许用户浏览帮助打印输出并查看输入和输出参数用法。</li>
@@ -1061,7 +1061,7 @@ fuction = (param1, param2, ...
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4, h5, h6'
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -1073,7 +1073,7 @@ fuction = (param1, param2, ...
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4, h5, h6').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
