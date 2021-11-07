@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-09-14T09:13:11.215Z</updated>
+  <updated>2021-11-07T09:18:27.666Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二阶非齐次常微分方程的解</title>
+    <link href="https://xxxxlc.github.io/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/"/>
+    <id>https://xxxxlc.github.io/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/</id>
+    <published>2021-10-02T02:00:16.000Z</published>
+    <updated>2021-11-07T09:18:27.666Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;非齐次线性微分方程&lt;/h1&gt;
+&lt;h2 id=&quot;标准形式&quot;&gt;标准形式&lt;/h2&gt;
+&lt;p&gt;$$&lt;br&gt;
+y’’ + py’ + q = f(x)&lt;br&gt;
+$$&lt;/p&gt;
+&lt;p&gt;它的解是由该线性方程的齐次形式的通解，加上非齐次方程的特解组成&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="math" scheme="https://xxxxlc.github.io/tags/math/"/>
+    
+  </entry>
   
   <entry>
     <title>typora-数学符号</title>
@@ -61,6 +90,31 @@
     
     
     <category term="reading note" scheme="https://xxxxlc.github.io/tags/reading-note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MATLAB一次修改全部变量名</title>
+    <link href="https://xxxxlc.github.io/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/"/>
+    <id>https://xxxxlc.github.io/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/</id>
+    <published>2021-08-03T02:06:09.000Z</published>
+    <updated>2021-11-07T09:15:51.985Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;MATLAB一次修改全部变量名&lt;/h1&gt;
+&lt;p&gt;按下 ctrl + H&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/1.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="MATLAB" scheme="https://xxxxlc.github.io/tags/MATLAB/"/>
     
   </entry>
   

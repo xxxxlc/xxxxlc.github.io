@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>二阶非齐次常微分方程的解</title>
+      <link href="/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/"/>
+      <url>/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/</url>
+      
+        <content type="html"><![CDATA[<h1>非齐次线性微分方程</h1><h2 id="标准形式">标准形式</h2><p>$$<br>y’’ + py’ + q = f(x)<br>$$</p><p>它的解是由该线性方程的齐次形式的通解，加上非齐次方程的特解组成</p><h2 id="齐次线性方程的通解">齐次线性方程的通解</h2><p>此时方程变为<br>$$<br>y’‘+py’+q = 0<br>$$</p><ul><li>若 $p,q$ 全为常数，那么方程为二阶常系数齐次线性微分方程</li><li>若$p,q$ 不全为常数，那么方程为二阶变系数齐次线性微分方程</li></ul><p>定理一：如果函数 $y_1(x)$ 与 $y_2(x)$ 线性无关且是方程的两个解，那么 $y = c_1y_1(x) + c_2y_2(x)$ 也是方程的解</p><ol><li>写出方程的特征方程 $r^2 + pr + q = 0$</li><li>判断 $p^2-4q$ ，从而决定如何继续求解</li><li>利用求$r_1，r_2$</li></ol><ul><li><p>当 $p^2-4q &gt; 0$ 此时 $r_1$ 和 $r_2$ 为两个不相等的实根<br>$$<br>y = C_1e^{r_1x} + C_2e^{r_2x}<br>$$</p></li><li><p>当 $p^2-4q = 0$ 此时 $r_1$ 和 $r_2$ 为两个相等的实根<br>$$<br>y = e^{r_1x}(C_1 + C_2x)<br>$$</p></li><li><p>当 $p^2-4q &lt; 0$ 此时 $r_1$ 和 $r_2$ 为两个不相等的共轭复根<br>$$<br>y = e^{\alpha x} (C_1cos\beta x + C_2 sin \beta x) \<br>\alpha = - \frac{p}{2} \qquad \beta = \frac{\sqrt{4q - p^2}}{2}<br>$$</p></li></ul><h2 id="非齐次方程的特解">非齐次方程的特解</h2><p>$$<br>y’‘+py’+q = f(x)<br>$$</p><h3 id="f-x-e-lambda-x-P-m-x">$f(x) = e^{\lambda x} P_m(x)$</h3><p>猜测 $y = e^{\lambda x} R(x)$ 为特解，$R(x)$ 是关于 $x$ 的一个多项式</p><p>对所猜测的 $y$ 的解进行求导有<br>$$<br>y^* = R(x)e^{\lambda x} \<br>\Rightarrow y^{<em>‘} = e^{\lambda x}[R’(x) + \lambda R(x)] \<br>\Rightarrow y^{</em>‘’} = e^{\lambda x}[R’‘(x) + 2\lambda R’(x) + \lambda ^2 R(x)]<br>$$<br>代入原方程有<br>$$<br>R’‘(x) + (2 \lambda + p)R’(x)+ (\lambda ^ 2 + p \lambda + q)R(x) = P_m(x)<br>$$</p><p>如果 $\lambda ^ 2 + p \lambda + q \neq 0$ ，即 $\lambda$ 不是原方程的特征方程 $r^2+pr+q = 0$ 的根，那么这时候 $2\lambda + p \neq0 $ 也成立（求导）</p><p>如果想要使得上式方程成立，那么 $R(x)$ 满足<br>$$<br>R(x) = b_0x^m + b_1x^{m-1}+…+b_m<br>$$<br>此时令方程两边 $x$ 的同次幂的系数相等即可</p><p>如果 $\lambda ^ 2 + p \lambda + q = 0$ ，则 $\lambda$ 是 原方程的特征方程 $r^2+pr+q = 0$ 的单根，但是 $2\lambda + p \neq0 $ ，此时有：<br>$$<br>R’‘(x) + (2 \lambda + p)R’(x) = P_m(x)<br>$$<br>要是两端相等，$R’(x)$ 必须是 $m$ 次的多项式<br>$$<br>R(x) = xR_m(x)<br>$$<br>同样根据两边 $x$ 的同次幂的系数相等即可$R(x)$</p><p>如果 $\lambda ^ 2 + p \lambda + q = 0$ ，则 $\lambda$ 是 原方程的特征方程 $r^2+pr+q = 0$ 的重根，但是 $2\lambda + p =0 $ ，此时有：<br>$$<br>R’'(x) = P_m(x)<br>$$<br>则令<br>$$<br>R(x) = x^2R_m(x)<br>$$</p><h3 id="f-x-e-lambda-x-P-l-x-cos-omega-x-Q-n-x-sin-omega-x">$f(x) = e^{\lambda x} P_l(x)\cos \omega x + Q_n(x) \sin \omega x$</h3><p>首先使用欧拉公式进行变形<br>$$<br>e^{i \theta} = \cos \theta + i \sin \theta \<br>$$<br>可以得到<br>$$<br>\cos \theta = \frac{1}{2}(e^{i \theta} + e^{-i \theta}) \<br>\sin \theta = \frac{1}{2}(e^{i \theta} - e^{-i \theta})<br>$$<br>代入 $f(x)$<br>$$<br>f(x) = (\frac{P_l(x)}{2} + \frac{Q_n(x)}{2i})e^{(\lambda + \omega i)x} + (\frac{P_l(x)}{2} - \frac{Q_n(x)}{2i})e^{(\lambda - \omega i)x}<br>$$<br>使用共轭函数 $P(x)$ 与 $\bar{P}(x)$ 来表示<br>$$<br>P(x) =\frac{P_l(x)}{2} + \frac{Q_n(x)}{2i} = \frac{P_l(x)}{2} + \frac{Q_n(x)}{2}i  \<br>\bar{P}(x) = \frac{P_l(x)}{2} - \frac{Q_n(x)}{2i} = \frac{P_l(x)}{2} - \frac{Q_n(x)}{2}i  \<br>\Rightarrow f(x) =P(x) e^{(\lambda + \omega i)x} + \bar{P}(x) e^{(\lambda - \omega i)x}<br>$$<br>此时方程变为<br>$$<br>y’‘+py’+q =P(x) e^{(\lambda + \omega i)x} + \bar{P}(x) e^{(\lambda - \omega i)x}<br>$$<br>根据叠加原理，只要分别解出以下两个方程即可</p><p>$$<br>y’‘+py’+q =P(x) e^{(\lambda + \omega i)x} \<br>y’‘+py’+q = \bar{P}(x) e^{(\lambda - \omega i)x}\<br>\Rightarrow y^* = x<sup>ke</sup>{\lambda x}[R_me^{\omega xi} + \bar{R}_me^{-\omega xi} ]<br>$$</p><p>其中 $k$ 按 $\lambda + \omega i$ 不是对应特征方程的根或者是特征方程的单根取0或者1</p><p>再用欧拉公式反代<br>$$<br>y^* = x<sup>ke</sup>{\lambda x}[R_m(\cos \omega x+ i \sin \omega x) + \bar{R}_m(\cos \omega x+ i \sin \omega x) ]<br>$$<br>由于 $R_m$ 与 $\bar{R}_m$ 共轭，相加后不会出现虚部，可以进一步化简为<br>$$<br>y^* = x<sup>ke</sup>{\lambda x}[R_m^{(1)}\cos \omega x + R_m^{(2)} \sin \omega x]<br>$$</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> math </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>typora-数学符号</title>
       <link href="/2021/09/14/typora-shu-xue-fu-hao/"/>
       <url>/2021/09/14/typora-shu-xue-fu-hao/</url>
@@ -28,6 +47,25 @@
         <tags>
             
             <tag> reading note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MATLAB一次修改全部变量名</title>
+      <link href="/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/"/>
+      <url>/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/</url>
+      
+        <content type="html"><![CDATA[<h1>MATLAB一次修改全部变量名</h1><p>按下 ctrl + H</p><p><img src="/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/1.png" alt="image-20210803100819916"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MATLAB </tag>
             
         </tags>
       
