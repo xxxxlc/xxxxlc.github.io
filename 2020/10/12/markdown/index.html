@@ -31,8 +31,8 @@
 
 <meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
+</head>
 
 
 
@@ -473,7 +473,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    787
+                    775
                 </div>
                 
 
@@ -493,85 +493,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>Markdown 用法</h1>
-<p>写在前面，在写blog忘记的时候可以回来看看 😄</p>
+                <h1 id="markdown-用法">Markdown 用法</h1>
+<p>写在前面，在写blog忘记的时候可以回来看看 <span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 <p>[Toc]</p>
-<h2 id="1-标题">1. 标题</h2>
-<br>
-标题是划分文章整体结构的最好方法，整洁的标题使得文章更为整洁，标题等级越小，则字号越大
+<h2 id="标题">1. 标题</h2>
+<p><br> 标题是划分文章整体结构的最好方法，整洁的标题使得文章更为整洁，标题等级越小，则字号越大</p>
 <pre class="line-numbers language-none"><code class="language-none">一号标题 #<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1>一号标题</h1>
-<p>一号标题主要用于整篇文章的题目</p>
-<pre class="line-numbers language-none"><code class="language-none">二号标题 ##<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="二号标题">二号标题</h2>
-<p>正文的题目开始使用的标题大小</p>
-<pre class="line-numbers language-none"><code class="language-none">三号标题 ###<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id="三号标题">三号标题</h3>
-<pre class="line-numbers language-none"><code class="language-none">四号标题 ####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="四号标题">四号标题</h4>
-<pre class="line-numbers language-none"><code class="language-none">五号标题 #####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h5 id="五号标题">五号标题</h5>
-<pre class="line-numbers language-none"><code class="language-none">..............<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="2-分割线">2. 分割线</h2>
-<h2 id="code￼6"><pre class="line-numbers language-none"><code class="language-none">---
+<h1 id="一号标题">一号标题</h1>
+<p>一号标题主要用于整篇文章的题目 </p><pre class="line-numbers language-none"><code class="language-none">二号标题 ##<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> ## 二号标题 正文的题目开始使用的标题大小 <pre class="line-numbers language-none"><code class="language-none">三号标题 ###<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> ### 三号标题 <pre class="line-numbers language-none"><code class="language-none">四号标题 ####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> #### 四号标题 <pre class="line-numbers language-none"><code class="language-none">五号标题 #####<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> ##### 五号标题 <pre class="line-numbers language-none"><code class="language-none">..............<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p></p>
+<h2 id="分割线">2. 分割线</h2>
+<h2 id="section"><pre class="line-numbers language-none"><code class="language-none">---
 ***<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></h2>
-<h2 id="3-斜体和粗体">3. 斜体和粗体</h2>
+<h2 id="斜体和粗体">3. 斜体和粗体</h2>
 <pre class="line-numbers language-none"><code class="language-none">* 斜体 *
 ** 粗体 **
 *** 斜体 ***
 ~~要删除的文字~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><em>斜体</em><br>
 <strong>粗体</strong><br>
-<em><strong>斜体+粗体</strong></em><br>
-<s>要删除的文字</s></p>
-<h2 id="4-引用">4. 引用</h2>
+<strong><em>斜体+粗体</em></strong><br>
+<del>要删除的文字</del></p>
+<h2 id="引用">4. 引用</h2>
 <pre class="line-numbers language-none"><code class="language-none">&gt;:........<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
-<p>:这是一个引用</p>
-</blockquote>
-<h2 id="5-表格">5. 表格</h2>
-<p>Markdown支持有序列表和无序列表，任何表格在建立的时候，序号和内容之间都应该有一个空格</p>
-<h3 id="5-1-无序表格">5.1 无序表格</h3>
-<pre class="line-numbers language-none"><code class="language-none">- 列表内容
+<p>:这是一个引用 ## 5. 表格 Markdown支持有序列表和无序列表，任何表格在建立的时候，序号和内容之间都应该有一个空格 ### 5.1 无序表格 </p><pre class="line-numbers language-none"><code class="language-none">- 列表内容
 + 列表内容
-* 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<h3 id="5-2-有序表格">5.2 有序表格</h3>
+* 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> - 列表内容 + 列表内容 * 列表内容<p></p>
+</blockquote>
+<h3 id="有序表格">5.2 有序表格</h3>
 <pre class="line-numbers language-none"><code class="language-none">1. 列表内容
 2. 列表内容
 3. 列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<ol>
+<ol type="1">
 <li>列表内容</li>
 <li>列表内容</li>
 <li>列表内容</li>
 </ol>
-<h3 id="5-3-列表嵌套">5.3 列表嵌套</h3>
-<p>列表上一级与下一级之间敲三个空格</p>
-<pre class="line-numbers language-none"><code class="language-none">* 一级无序列表内容
+<h3 id="列表嵌套">5.3 列表嵌套</h3>
+<p>列表上一级与下一级之间敲三个空格 </p><pre class="line-numbers language-none"><code class="language-none">* 一级无序列表内容
 
    * 二级无序列表内容
    * 二级无序列表内容
-   * 二级无序列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>
-<p>一级无序列表内容</p>
+   * 二级无序列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre> * 一级无序列表内容<p></p>
 <ul>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
 <li>二级无序列表内容</li>
-</ul>
-</li>
 </ul>
 <p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符</p>
-<h2 id="6-表格">6. 表格</h2>
+<h2 id="表格">6. 表格</h2>
 <pre class="line-numbers language-none"><code class="language-none">表头|表头|表头
 ---|:--:|---:
 内容|内容|内容
@@ -583,69 +553,33 @@
 -两边加：表示文字居中
 -右边加：表示文字居右
 注：原生的语法两边都要用 | 包起来。此处省略<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>表格确实有点麻烦😵</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th style="text-align:center">表头</th>
-<th style="text-align:right">表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
-</tr>
-<tr>
-<td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
-</tr>
-</tbody>
-</table>
-<h2 id="7-代码">7. 代码</h2>
-<h3 id="7-1-多行代码">7.1 多行代码</h3>
+<p>表格确实有点麻烦<span class="github-emoji"><span>😵</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f635.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 表头|表头|表头 ---|:--:|---: 内容|内容|内容 内容|内容|内容</p>
+<h2 id="代码">7. 代码</h2>
+<h3 id="多行代码">7.1 多行代码</h3>
 <pre class="line-numbers language-none"><code class="language-none">```
 ### 7.2 单行代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>这里是<code>xxxxlc</code></p>
-<pre class="line-numbers language-none"><code class="language-none">`xxxxlc`
+<p>这里是<code>xxxxlc</code> </p><pre class="line-numbers language-none"><code class="language-none">`xxxxlc`
 
 ## 8. 超链接
-### 8.1 页内跳转<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a href="#jump">点击跳转</a></p>
-<pre class="line-numbers language-none"><code class="language-none">[点击跳转](#jump)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><span id="jump">跳转此处<span></span></span></p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;span id="jump"&gt;跳转此处&lt;span&gt;
+### 8.1 页内跳转<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> <a href="#jump">点击跳转</a> <pre class="line-numbers language-none"><code class="language-none">[点击跳转](#jump)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> <span id="jump">跳转此处<span> <pre class="line-numbers language-none"><code class="language-none">&lt;span id="jump"&gt;跳转此处&lt;span&gt;
 
-### 8.2 页外跳转<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><a href="%E8%B6%85%E9%93%BE%E6%8E%A5">超链接名</a></p>
-<pre class="line-numbers language-none"><code class="language-none">[Github](https://github.com/)
+### 8.2 页外跳转<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> <a href="超链接">超链接名</a> <pre class="line-numbers language-none"><code class="language-none">[Github](https://github.com/)
 
 ### 8.3 参考式超链接
-参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>This is <a target="_blank" rel="noopener" href="http://example.com/" title="Optional Title Here">an example</a> reference-style link.</p>
-<pre class="line-numbers language-none"><code class="language-none">接着，在文件的任意处，你可以把这个标记的链接内容定义出来:<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<pre class="line-numbers language-none"><code class="language-none">
+参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> This is [an example][id] reference-style link. <pre class="line-numbers language-none"><code class="language-none">接着，在文件的任意处，你可以把这个标记的链接内容定义出来:<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> [id]: http://example.com/ "Optional Title Here" <pre class="line-numbers language-none"><code class="language-none">
 ### 8.4 自动链接
-Markdown 还支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;https://github.com/&gt;
+Markdown 还支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接。 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> <a target="_blank" rel="noopener" href="https://github.com/" class="uri">https://github.com/</a> <pre class="line-numbers language-none"><code class="language-none">&lt;https://github.com/&gt;
 
 ## 9 图片
 ### 9.1 行内式图片语法
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/2020/10/12/markdown/%E5%9B%BE%E7%89%87%E7%9A%84%E8%B7%AF%E5%BE%84" alt="图片的代替文字"></p>
-<pre><code>
-https://www.webfx.com/tools/emoji-cheat-sheet/
-https://zhuanlan.zhihu.com/p/99319314
-
-![test](https://raw.githubusercontent.com/xxxxlc/image/main/picture/test.jpg)
-
-![test](https://cdn.jsdelivr.net/gh/xxxxlc/image/img/test.png)
-
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre> <img src="/2020/10/12/markdown/图片的路径" alt="图片的代替文字"> ```</span></span><p></p>
+<p>https://www.webfx.com/tools/emoji-cheat-sheet/ https://zhuanlan.zhihu.com/p/99319314</p>
+<figure>
+<img src="https://raw.githubusercontent.com/xxxxlc/image/main/picture/test.jpg" alt="test"><figcaption aria-hidden="true">test</figcaption>
+</figure>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/xxxxlc/image/img/test.png" alt="test"><figcaption aria-hidden="true">test</figcaption>
+</figure>
 
                 
             </div>

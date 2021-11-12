@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-12T02:40:57.997Z</updated>
+  <updated>2021-11-12T02:43:08.861Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -21,17 +21,17 @@
     <link href="https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/"/>
     <id>https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/</id>
     <published>2021-11-12T01:38:17.000Z</published>
-    <updated>2021-11-12T02:40:57.997Z</updated>
+    <updated>2021-11-12T02:43:08.861Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1&gt;切平面算法&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;切平面算法&quot;&gt;切平面算法&lt;/h1&gt;
 &lt;p&gt;切平面算法是对凸函数的一种寻找极值的优化的算法，通过不断的构造平面逼近目标函数来求取极小值&lt;/p&gt;
 &lt;h2 id=&quot;原理&quot;&gt;原理&lt;/h2&gt;
-&lt;p&gt;设对于所有属于凸函数定义域（凸集）的 &lt;strong&gt;x&lt;/strong&gt; ，目标函数</summary>
+&lt;p&gt;设对于所有属于凸函数定义域（凸集）的 &lt;strong&gt;x&lt;/strong&gt;</summary>
         
       
     
@@ -54,13 +54,10 @@
       
         
         
-    <summary type="html">&lt;h1&gt;非齐次线性微分方程&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;非齐次线性微分方程&quot;&gt;非齐次线性微分方程&lt;/h1&gt;
 &lt;h2 id=&quot;标准形式&quot;&gt;标准形式&lt;/h2&gt;
-&lt;p&gt;$$&lt;br&gt;
-y’’ + py’ + q = f(x)&lt;br&gt;
-$$&lt;/p&gt;
-&lt;p&gt;它的解是由该线性方程的齐次形式的通解，加上非齐次方程的特解组成&lt;/p&gt;
-&lt;h2</summary>
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+y&#39;&#39; + py&#39; + q =</summary>
         
       
     
@@ -83,8 +80,11 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/09/14/typora-shu-xue-fu-hao/1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/09/14/typora-shu-xue-fu-hao/2.png&quot;</summary>
+    <summary type="html">&lt;figure&gt;
+&lt;img src=&quot;/2021/09/14/typora-shu-xue-fu-hao/1.png&quot; alt=&quot;1&quot;&gt;&lt;figcaption aria-hidden=&quot;true&quot;&gt;1&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img</summary>
         
       
     
@@ -105,10 +105,10 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h1&gt;Chapter 1 初见网络爬虫&lt;/h1&gt;
-&lt;h2 id=&quot;1-网络连接&quot;&gt;1 网络连接&lt;/h2&gt;
+    <summary type="html">&lt;h1 id=&quot;chapter-1-初见网络爬虫&quot;&gt;Chapter 1 初见网络爬虫&lt;/h1&gt;
+&lt;h2 id=&quot;网络连接&quot;&gt;1 网络连接&lt;/h2&gt;
 &lt;p&gt;python通过urlopen模块进行数据交换&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+&lt;pre class=&quot;line-numbers</summary>
         
       
     
@@ -131,9 +131,10 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h1&gt;MATLAB一次修改全部变量名&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;matlab一次修改全部变量名&quot;&gt;MATLAB一次修改全部变量名&lt;/h1&gt;
 &lt;p&gt;按下 ctrl + H&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/08/03/matlab-yi-ci-xiu-gai-quan-bu-bian-liang-ming/1.png&quot;</summary>
+&lt;figure&gt;
+&lt;img</summary>
         
       
     
@@ -177,10 +178,10 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h1&gt;VSCode使用方法（汇总）&lt;/h1&gt;
-&lt;h2 id=&quot;VSCode安装&quot;&gt;VSCode安装&lt;/h2&gt;
+    <summary type="html">&lt;h1 id=&quot;vscode使用方法汇总&quot;&gt;VSCode使用方法（汇总）&lt;/h1&gt;
+&lt;h2 id=&quot;vscode安装&quot;&gt;VSCode安装&lt;/h2&gt;
 &lt;p&gt;进入VSCode官网进行下载&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/Download&quot;&gt;Download</summary>
+&lt;p&gt;&lt;a</summary>
         
       
     
@@ -203,7 +204,7 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h1&gt;MATLAB</summary>
+    <summary type="html">&lt;h1 id=&quot;matlab-编程风格指南&quot;&gt;MATLAB</summary>
         
       
     
@@ -226,10 +227,8 @@ $$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h1&gt;Markdown 用法&lt;/h1&gt;
-&lt;p&gt;写在前面，在写blog忘记的时候可以回来看看 😄&lt;/p&gt;
-&lt;p&gt;[Toc]&lt;/p&gt;
-&lt;h2 id=&quot;1-标题&quot;&gt;1.</summary>
+    <summary type="html">&lt;h1 id=&quot;markdown-用法&quot;&gt;Markdown 用法&lt;/h1&gt;
+&lt;p&gt;写在前面，在写blog忘记的时候可以回来看看 &lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img</summary>
         
       
     
@@ -264,7 +263,8 @@ $$&lt;/p&gt;
         
         
     <summary type="html">&lt;p&gt;始于足下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/07/16/start/start.jpg&quot;</summary>
+&lt;figure&gt;
+&lt;img src=&quot;/2020/07/16/start/start.jpg&quot; alt=&quot;start&quot;&gt;&lt;figcaption</summary>
         
       
     
