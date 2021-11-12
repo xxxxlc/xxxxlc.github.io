@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-07T09:18:27.666Z</updated>
+  <updated>2021-11-12T02:28:21.134Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>切平面法</title>
+    <link href="https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/"/>
+    <id>https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/</id>
+    <published>2021-11-12T01:38:17.000Z</published>
+    <updated>2021-11-12T02:28:21.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;切平面算法&lt;/h1&gt;
+&lt;p&gt;切平面算法是对凸函数的一种寻找极值的优化的算法，通过不断的构造平面逼近目标函数来求取极小值&lt;/p&gt;
+&lt;h2 id=&quot;原理&quot;&gt;原理&lt;/h2&gt;
+&lt;p&gt;设对于所有属于凸函数定义域（凸集）的 &lt;strong&gt;x&lt;/strong&gt; ，目标函数</summary>
+        
+      
+    
+    
+    
+    
+    <category term="algorithm" scheme="https://xxxxlc.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>二阶非齐次常微分方程的解</title>

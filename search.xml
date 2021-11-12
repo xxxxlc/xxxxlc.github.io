@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>切平面法</title>
+      <link href="/2021/11/12/qie-ping-mian-fa/"/>
+      <url>/2021/11/12/qie-ping-mian-fa/</url>
+      
+        <content type="html"><![CDATA[<h1>切平面算法</h1><p>切平面算法是对凸函数的一种寻找极值的优化的算法，通过不断的构造平面逼近目标函数来求取极小值</p><h2 id="原理">原理</h2><p>设对于所有属于凸函数定义域（凸集）的 <strong>x</strong> ，目标函数 <strong>f</strong> 也是凸的。</p><p>假设之前已经选取了 <strong>k</strong> 个参数向量 $x_1,x_2,…,x_k$ ，且已经计算了这些点的函数值 $f(x_1),…,f(x_k)$ 以及它们的次梯度 $\nabla f(x_1),…,\nabla f(x_k)$ ，因为函数是凸的，所以这些点的泰勒展开的一次项（次梯度是小于等于当点的梯度），可以得到<br>$$<br>f(x) \geq f(x_i) + \nabla f(x_i)(x-x_i)<br>$$<br>（以二阶函数作图示例）</p><p><img src="/2021/11/12/qie-ping-mian-fa/image-20211112092443719.png" alt="image-20211112092443719"></p><p>在二次优化中，次梯度就为该点的切线方向</p><p>所以对于凸函数中所有的 <strong>x</strong> 来说，满足以下关系<br>$$<br>f(x) \geq \max \ f(x_i) + \nabla^Tf(x_i)(x-x_i)<br>$$<br>换句话说，目标函数值构成的曲线始终在由次梯度形成的平面组合之上，而对于目标函数的全局最小值 $x^<em>$ 始终有<br>$$<br>f(x^</em>) \geq \min_{x}\ \ \max(f(x_i) + \nabla^Tf(x_i)(x-x_i)) = :L_k^*<br>$$<br>$L_k^<em>$ 为目前所选的参数向量 $x_1,x_2,…,x_k$ 所构成的平面的最小点，即目标函数最优解 $x<sup>*$的下界，$U_k</sup></em>$ 为目前所选的参数向量 $x_1,x_2,…,x_k$ 中函数值最小的点，即目标函数最优解 $x^<em>$的上界<br>$$<br>U_k^</em> = \min(f(x_i))<br>$$<br>所谓切平面法，就是通过不断缩小上界和下界的差距来达到目标函数的最优解 $x^*$</p><p>对于每一步的$L_k^<em>$ 可以通过以下线性规划来求解<br>$$<br>$L_k^</em> = \min \ L_k \<br>s.t.\  L_k \geq f(x_i) + \nabla^Tf(x_i)(x-x_i)<br>$$<br>通过简化，使得此线性规划问题更加容易求解</p><p>定义以下矩阵以及向量<br>$$<br>c =<br>\left [ \begin{array}{c}<br>0 \<br>1<br>\end{array} \right ]<br>,<br>w_k =<br>\left [ \begin{array}{c}<br>x \<br>L_k<br>\end{array} \right ]\<br>A =<br>\left [ \begin{array}{c}<br>\nabla^Tf(x_1) &amp; -1\<br>… &amp; … \<br>\nabla^Tf(x_i) &amp; -1<br>\end{array} \right ],<br>b =<br>\left [ \begin{array}{c}<br>\nabla^Tf(x_1)x_1 - f(x_1)\<br>… \<br>\nabla^Tf(x_i)x_i - f(x_i)<br>\end{array} \right ]<br>$$<br>则原线性规划问题变为：<br>$$<br>\min c^Tw_k \<br>s.t. \ Aw_k \leq b<br>$$<br>所以每次增加一个迭代点 $x_k$ 都有<br>$$<br>U_k^* \geq U_{k+1}^* \geq f(x^<em>) \geq L_{k+1}^</em> \geq L_k^*<br>$$<br>可以不断迭代直到满足条件</p><h2 id="有约束切平面法">有约束切平面法</h2><p>有约束切平面法相比于无约束切平面法，多的是对于求解域加了约束 $g(x)$</p><p>如果将 $g(x)$ 同样用次梯度代替，用平面去逼近 $g(x)$ ，也相当于解另一个线性规划问题，如果将两个线性规划结合，就是有约束的切平面法</p><p><img src="/2021/11/12/qie-ping-mian-fa/image-20211112101656345.png" alt="image-20211112101656345"></p><p>对于凸函数 $g(x)$ 的次梯度有<br>$$<br>g(x) \geq g(x_i) + \nabla^Tg(x_i)(x - x_i)  \qquad i=1,…,k<br>$$<br>这就是说，<br>$$<br>{x|g(x)\leq0 } \in { x| g(x_i) + \nabla^Tg(x_i)(x - x_i)} \<br>\nabla^Tg(x_i)x \leq - g(x_i) + \nabla^Tg(x_i) x_i \qquad i=1,…,i<br>$$<br>相当于人为的扩大了可行解的范围，当然不一定准确，要经过不断地迭代，缩小切平面逼近的可行解与实际可行解的差距</p><p>将其写入线性规划中有<br>$$<br>c =<br>\left [ \begin{array}{c}<br>0 \<br>1<br>\end{array} \right ]<br>,<br>w_k =<br>\left [ \begin{array}{c}<br>x \<br>L_k<br>\end{array} \right ]\<br>A =<br>\left [ \begin{array}{c}<br>\nabla^Tf(x_1) &amp; -1\<br>\nabla^Tg(x_1) &amp; 0\<br>… &amp; … \<br>\nabla^Tf(x_i) &amp; -1 \<br>\nabla^Tg(x_i) &amp; 0<br>\end{array} \right ],<br>b =<br>\left [ \begin{array}{c}<br>\nabla^Tf(x_1)x_1 - f(x_1)\<br>\nabla^Tg(x_1)x_1 - g(x_1)\<br>… \<br>\nabla^Tf(x_i)x_i - f(x_i) \<br>\nabla^Tg(x_i)x_i - g(x_i)<br>\end{array} \right ]<br>$$<br>不断的迭代求解该线性规划问题，直到误差足够小<br>$$<br>U_k^* \geq U_{k+1}^* \geq f(x^<em>) \geq L_{k+1}^</em> \geq L_k^*<br>$$</p><p>对于某些接近凸函数的区域，仍然可以使用切面算法。但是，如果找到$U_i \leq L_i$ ，可能会在运行算法时遇到一些错误。在这种情况下，必须重新选择一组新的初始向量 $x_1,…x_k$，在最后找到的 $x_i$ 附近，然后重新开始优化</p><p>具体<strong>MATLAB</strong>实现过程可见代码<a href="https://github.com/xxxxlc/opt/blob/main/matlab_algorithm/cuting_plan.m">opt/cuting_plan.m at main · xxxxlc/opt (github.com)</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>二阶非齐次常微分方程的解</title>
       <link href="/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/"/>
       <url>/2021/10/02/er-jie-fei-qi-ci-chang-wei-fen-fang-cheng-de-jie/</url>
