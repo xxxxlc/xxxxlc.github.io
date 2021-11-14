@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-12T02:43:08.861Z</updated>
+  <updated>2021-11-14T03:39:32.128Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>遗传算法详解</title>
+    <link href="https://xxxxlc.github.io/2021/11/13/yi-chuan-suan-fa-xiang-jie/"/>
+    <id>https://xxxxlc.github.io/2021/11/13/yi-chuan-suan-fa-xiang-jie/</id>
+    <published>2021-11-13T13:39:24.000Z</published>
+    <updated>2021-11-14T03:39:32.128Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;遗传算法原理&quot;&gt;遗传算法原理&lt;/h1&gt;
+&lt;h2 id=&quot;背景介绍&quot;&gt;1 背景介绍&lt;/h2&gt;
+&lt;p&gt;进化计算：繁殖、变异、竞争、选择&lt;/p&gt;
+&lt;h2 id=&quot;基本遗传算法定义&quot;&gt;2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="algorithm" scheme="https://xxxxlc.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>切平面法</title>
