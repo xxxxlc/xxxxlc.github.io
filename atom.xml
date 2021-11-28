@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-14T03:39:32.128Z</updated>
+  <updated>2021-11-28T07:13:40.774Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>simplex</title>
+    <link href="https://xxxxlc.github.io/2021/11/28/simplex/"/>
+    <id>https://xxxxlc.github.io/2021/11/28/simplex/</id>
+    <published>2021-11-28T03:40:40.000Z</published>
+    <updated>2021-11-28T07:13:40.774Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;simplex&quot;&gt;Simplex&lt;/h1&gt;
+&lt;p&gt;单纯形法&lt;/p&gt;
+&lt;h2 id=&quot;理论原理&quot;&gt;理论原理&lt;/h2&gt;
+&lt;p&gt;单纯形法求解优化问题的形式 &lt;span class=&quot;math display&quot;&gt;\[
+f(x) = c^Tx \\
+Ax =</summary>
+        
+      
+    
+    
+    
+    
+    <category term="algorithm" scheme="https://xxxxlc.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>遗传算法详解</title>
@@ -197,7 +225,7 @@ y&#39;&#39; + py&#39; + q =</summary>
     <link href="https://xxxxlc.github.io/2021/07/26/vscode/"/>
     <id>https://xxxxlc.github.io/2021/07/26/vscode/</id>
     <published>2021-07-26T13:41:10.000Z</published>
-    <updated>2021-09-12T02:37:22.550Z</updated>
+    <updated>2021-11-28T05:21:46.560Z</updated>
     
     
       
@@ -281,7 +309,7 @@ y&#39;&#39; + py&#39; + q =</summary>
     <link href="https://xxxxlc.github.io/2020/07/16/start/"/>
     <id>https://xxxxlc.github.io/2020/07/16/start/</id>
     <published>2020-07-16T13:02:03.000Z</published>
-    <updated>2021-07-27T06:29:58.219Z</updated>
+    <updated>2021-11-28T05:21:48.988Z</updated>
     
     
       
