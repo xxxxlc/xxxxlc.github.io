@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, xxxxlc">
+    <meta name="keywords" content="active-set, xxxxlc">
     <meta name="description" content="Write Freely ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | xxxxlc</title>
+    <title>active-set | xxxxlc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,107 +322,552 @@
 
 </header>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/css/barrager.css">
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.barrager.js"></script>
+    
 
-<div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                   contact
-                
-           </div>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "纵有疾风起，人生不言弃",
-                            
-                                "一点浩然气，千里快哉风",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">active-set</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
+<main class="post-container content">
 
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    #send{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #0ba360;
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
     }
-    #clear{
-        margin-bottom: 10px;
-        width: 49%;
-        background-color: #e7c65c;
+
+    #articleContent :focus {
+        outline: none;
     }
-    p{
-        text-align: center;
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        /* width: 345px;
+        padding-left: 20px; */
+        width: 345px;
+        padding-left: 20px;
+        background-color: rgba(63, 50, 182, 0.7);
+        border-radius: 20px;
+        box-shadow: 0 10px 35px 2px rgba(31, 22, 153, 0.15), 0 5px 15px rgba(46, 187, 27, 0.07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
     }
 </style>
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/algorithm/">
+                                <span class="chip bg-color">algorithm</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-29
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    729
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="active-set有效集法">Active-set（有效集法）</h1>
+<p>对于存在不等式约束的二次规划，在每次的迭代中，以已知的可行点为起点，把在该点起作用的约束作为等式约束，将不起作用约束去掉，在此等式约束下极小化目标函数， 求得新的比较好的可行点以后，重复以上做法。</p>
+<p>通过解一系列等式约束的二次规划来实现不等式约束的优化，称为有效集方法</p>
+<p>等式二次规划标准形式 <span class="math display">\[
+min_{x} \ f(x) = min_{x}   \ \frac{1}{2} x^T G x + g^Tx \\
+Ax = b\\
+x \geq 0
+\]</span> 求解方法：lagrange乘子法</p>
+<h2 id="理论基础">理论基础</h2>
+<p>设 <span class="math inline">\(x*\)</span> 为二次规划问题的局部极小点，并且在 <span class="math inline">\(x^*\)</span> 处的有效集合为 <span class="math inline">\(w(x^*)=E \cup I(x^*)\)</span>， 则 <span class="math inline">\(x^*\)</span> 必是问题去掉不等式约束的局部最小点，反之 <span class="math inline">\(x^*\)</span> 是不等式约束和等式约束共同的极小点，那么 <span class="math inline">\(x^*\)</span> 比满足等式约束。</p>
+<p>构造一个集合序列去逼近有效集 <span class="math inline">\(w(x^*)\)</span> ，即从初始点出发，计算有效集 <span class="math inline">\(w(x_0)\)</span> ，解对应的等式约束子问题，重复这一做法，得到有效集序列 <span class="math inline">\(\{ w(x_k)\}\)</span> ，使得 <span class="math inline">\(w(x_0) \rightarrow w(x^*)\)</span> ，获得原问题的最优解</p>
+<p>有效集方法是一个可行点方法，即每个迭代点都要求是可行点，每次迭代求解一个等式约束的二次规划。如果等式约束二次规划的解是原约束问题的可行点，则判断<strong>lagrange</strong>中的 <span class="math inline">\(\lambda\)</span> 是否满足解的条件，如果满足就停止计算，不满足就去掉一个约束重新计算。 <span class="math display">\[
+\lambda ^* \geq 0,\qquad i \in I(x^*) \\
+Gx^* + g = \sum_{i \in E \cup I(x^*)} a_i \lambda_i^*
+\]</span> 如果当前等式二次规划的解不是原问题的可行解，必须增加约束之后重新计算</p>
+<p>在 <span class="math inline">\(k\)</span> 次迭代时，有可行点 <span class="math inline">\(x_k\)</span> 以及工作集（所有等式约束和有效不等式约束组成）<span class="math inline">\(w_k\)</span></p>
+<p>设 <span class="math inline">\(p_k\)</span> 是问题： <span class="math display">\[
+min \ \frac{1}{2} (x_k + p)^T G (x_k+p) + g^T(x_k+p) \\
+s.t. a_i^T p = 0 ,\qquad i\in w_k
+\]</span> 如果 <span class="math inline">\(p_k = 0\)</span> ，则知 <span class="math inline">\(x_k\)</span> 是原问题 KT点，如果 $_i^k  $ 对所有的在 <span class="math inline">\(w_k\)</span> 中的约束都成立，那么 <span class="math inline">\(x_k\)</span> 就是原问题的最优解 <span class="math display">\[
+min \ g^Tx + \frac{1}{2} x^TGx \\
+s.t. \ \ \ a_i^Tx = 0, \qquad i \in w_k
+\]</span> 否则去掉约束重新计算</p>
+<p>如果 <span class="math inline">\(p_k \neq 0\)</span> ，此时 <span class="math inline">\(x_k + p_k\)</span> 可能不是原问题的可行点，此时在 <span class="math inline">\(x_k\)</span> 和 <span class="math inline">\(x_k + p_k\)</span> 之间的线段取最近的可行点 <span class="math display">\[
+x_{k+1} = x_k + \alpha_k p_k \\
+\alpha_k = min \{1,min\frac{b_i-\alpha_i^Tx_k}{\alpha_ip_k}\}
+\]</span></p>
+<h2 id="计算步骤">计算步骤</h2>
+<ul>
+<li>计算初始可行点 <span class="math inline">\(x_0\)</span> ，令 <span class="math inline">\(w_0 = E \cup I(x_0)\)</span></li>
+<li>解等式约束二次规划问题
+<ul>
+<li>如果 <span class="math inline">\(p_k \neq 0\)</span> ，则向下计算</li>
+<li>如果 <span class="math inline">\(p_k = 0\)</span> 且 <span class="math inline">\(\lambda_i^{(k)} \geq 0\)</span> ，停止计算</li>
+</ul></li>
+<li>计算 <span class="math inline">\(\alpha_k\)</span></li>
+<li><span class="math inline">\(w_{k+1} = w_k;k = k+ 1\)</span></li>
+</ul>
+<h2 id="代码示例">代码示例</h2>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">xxxxlc</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://xxxxlc.github.io/2021/11/29/active-set/">https://xxxxlc.github.io/2021/11/29/active-set/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">xxxxlc</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/11/29/active-set/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="active-set">
+                        
+                        <span class="card-title">active-set</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xxxxlc
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
+                    </a>
+                    
                 </div>
                 
             </div>
-            <!--valine评论弹幕-->
-            
         </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/11/28/simplex/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="simplex">
+                        
+                        <span class="card-title">simplex</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            xxxxlc
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
 
-        <!--其他评论card-->
-        <div class="card">
-            
+</div>
 
-            
 
-            
 
-            
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-            
+<!-- 代码语言 -->
 
-            
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
-            
 
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">

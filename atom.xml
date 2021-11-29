@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-28T07:23:40.408Z</updated>
+  <updated>2021-11-29T09:27:03.472Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>active-set</title>
+    <link href="https://xxxxlc.github.io/2021/11/29/active-set/"/>
+    <id>https://xxxxlc.github.io/2021/11/29/active-set/</id>
+    <published>2021-11-29T09:11:14.000Z</published>
+    <updated>2021-11-29T09:27:03.472Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;active-set有效集法&quot;&gt;Active-set（有效集法）&lt;/h1&gt;
+&lt;p&gt;对于存在不等式约束的二次规划，在每次的迭代中，以已知的可行点为起点，把在该点起作用的约束作为等式约束，将不起作用约束去掉，在此等式约束下极小化目标函数，</summary>
+        
+      
+    
+    
+    
+    
+    <category term="algorithm" scheme="https://xxxxlc.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>simplex</title>
     <link href="https://xxxxlc.github.io/2021/11/28/simplex/"/>
     <id>https://xxxxlc.github.io/2021/11/28/simplex/</id>
     <published>2021-11-28T03:40:40.000Z</published>
-    <updated>2021-11-28T07:23:40.408Z</updated>
+    <updated>2021-11-28T07:29:58.776Z</updated>
     
     
       

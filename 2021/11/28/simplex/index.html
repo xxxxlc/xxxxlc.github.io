@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -503,7 +503,7 @@
 <p>单纯形法求解优化问题的形式 <span class="math display">\[
 f(x) = c^Tx \\
 Ax = b
-\]</span> 通常假设 $m n $ 的矩阵 $A $ 的秩为 $m $ ，在这个基础上，可以将 $A $ 拆解成两个子矩阵，其中 <span class="math inline">\(B\)</span> 是 <span class="math inline">\(m \times m\)</span> 的非奇异子矩阵，<span class="math inline">\(A\)</span> 的其余部分可以使用 <span class="math inline">\(N\)</span> 表示，同时依据这个分裂方式，同时将 <span class="math inline">\(x\)</span> 与 <span class="math inline">\(c\)</span> 对应分割为 <span class="math inline">\(x_B\)</span> 、 <span class="math inline">\(x_N\)</span> 和 <span class="math inline">\(c_B, c_N\)</span> 两部分，此刻等式约束可以重新表现为 <span class="math display">\[
+\]</span> 通常假设 $m n $ 的矩阵 $A $ 的 秩为 $m $ ，在这个基础上，可以将 $A $ 拆解成两个子矩阵，其中 <span class="math inline">\(B\)</span> 是 <span class="math inline">\(m \times m\)</span> 的非奇异子矩阵，<span class="math inline">\(A\)</span> 的其余部分可以使用 <span class="math inline">\(N\)</span> 表示，同时依据这个分裂方式，同时将 <span class="math inline">\(x\)</span> 与 <span class="math inline">\(c\)</span> 对应分割为 <span class="math inline">\(x_B\)</span> 、 <span class="math inline">\(x_N\)</span> 和 <span class="math inline">\(c_B, c_N\)</span> 两部分，此刻等式约束可以重新表现为 <span class="math display">\[
 Ax = Bx_B + Nx_N = b \\
 \Rightarrow x_B = B^{-1}b - B^{-1}Nx_N
 \]</span> 在另一方面，也可以得出 <span class="math inline">\(f(x)\)</span> 的表达式 <span class="math display">\[
@@ -640,18 +640,17 @@ j = \arg \ \min(\frac{(X_B)j}{y_j}| y_j &gt; 0)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/28/simplex/">
+                <a href="/2021/11/29/active-set/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="simplex">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="active-set">
                         
-                        <span class="card-title">simplex</span>
+                        <span class="card-title">active-set</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -661,9 +660,9 @@ j = \arg \ \min(\frac{(X_B)j}{y_j}| y_j &gt; 0)
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -672,7 +671,6 @@ j = \arg \ \min(\frac{(X_B)j}{y_j}| y_j &gt; 0)
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
