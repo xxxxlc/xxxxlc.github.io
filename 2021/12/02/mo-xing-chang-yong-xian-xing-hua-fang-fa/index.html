@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo具体用法, xxxxlc">
+    <meta name="keywords" content="模型常用线性化方法, xxxxlc">
     <meta name="description" content="Write Freely ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo具体用法 | xxxxlc</title>
+    <title>模型常用线性化方法 | xxxxlc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo具体用法</h1>
+                    <h1 class="description center-align post-title">模型常用线性化方法</h1>
                 </div>
             </div>
         </div>
@@ -450,9 +450,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/algorithm/">
+                                <span class="chip bg-color">algorithm</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -464,7 +468,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2021-12-02
                 </div>
                 
 
@@ -473,7 +477,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    512
                 </div>
                 
 
@@ -493,7 +497,142 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="模型常用线性化方法">模型常用线性化方法</h1>
+<h2 id="maxmin">1 max/min</h2>
+<p>令 <span class="math display">\[
+z = \max (x, y)
+\]</span> 该约束可等价为以下两个约束 <span class="math display">\[
+z \geq \max (x,y) \\
+z \leq \max (x, y)
+\]</span> 其中第一个约束可以用以下约束代替 <span class="math display">\[
+z \geq x \qquad z \geq y
+\]</span> 第二个约束可以用以下约束代替 <span class="math display">\[
+z \leq x + M(1 - u_1) \\
+z \leq y + M(1 - u_2) \\
+u_1 + u_2  \geq 1 \\
+u_1,u_2 \in \{ 0, 1\}
+\]</span> 其中 M 为较大的常数</p>
+<p>综上所述，最大值约束可通过如下线性约束等价 <span class="math display">\[
+z \geq x \\
+z \geq y \\
+z \leq x + M(1 - u_1) \\
+z \leq y + M(1 - u_2) \\
+u_1 + u_2  \geq 1 \\
+u_1,u_2 \in \{ 0, 1\}
+\]</span> 同理可得最小值的约束通过如下线性约束等价 <span class="math display">\[
+\min(x,y) = -\max(-x,-y)
+\]</span></p>
+<p><span class="math display">\[
+z \leq x \\
+z \leq y \\
+z \geq x - M(1-u_1) \\
+z \geq y - M(1-y_1) \\
+u_1 + u_2 \geq 1 \\
+u_1,u_2 \in \{0, 1 \}
+\]</span></p>
+<h2 id="max-min-min-max">2 max min / min max</h2>
+<h3 id="max-min">max min</h3>
+<p><span class="math display">\[
+\max \ \min (x,y)
+\]</span></p>
+<p>线性化方法 <span class="math display">\[
+\max z \\
+s.t. \ \ z \leq x\\
+z \leq y
+\]</span></p>
+<h3 id="min-max">min max</h3>
+<p><span class="math display">\[
+\min \ \max (x,y)
+\]</span></p>
+<p>线性化方法 <span class="math display">\[
+\min z
+\\
+s.t. \ \ z \geq x \\
+z \geq y
+\]</span></p>
+<h3 id="max-max">max max</h3>
+<p><span class="math display">\[
+\max \ \max (x, y)
+\]</span></p>
+<p>线性化方法 <span class="math display">\[
+\max z \\
+s.t. \\
+z \geq x \qquad (可以去掉)\\ 
+z \geq y \qquad (可以去掉)\\
+z \leq x + M(1-u_1)\\
+z \leq y + M(1-u_2)\\
+u_1 + u_2 \geq 1 \\
+u_1,u_2 \in \{0,1\}
+\]</span></p>
+<h3 id="min-min">min min</h3>
+<p><span class="math display">\[
+\min \min (x,y) \\
+\]</span></p>
+<p><span class="math display">\[
+\min z\\
+s.t.\\
+z \leq x\\
+z \leq y\\
+z \geq x - M(1-u_1)\\
+z \geq y - M(1-u_2)\\
+u_1 + u_2 \geq 1\\
+u_1,u_2 \in \{0,1\}
+\]</span></p>
+<h2 id="绝对值">3 绝对值</h2>
+<h3 id="目标函数中含有绝对值">目标函数中含有绝对值</h3>
+<p><span class="math display">\[
+\min \sum_i c_i |xi| \\
+Ax = b\\
+c_i \geq0
+\]</span></p>
+<p>线性化方法1 <span class="math display">\[
+\min \sum_i c_i y_i\\
+Ax=b\\
+y_i \geq x_i\\
+y_i \geq -x_i
+\]</span> 线性方法二 <span class="math display">\[
+x = u + v\\
+|x| = u -v \\
+\]</span></p>
+<p><span class="math display">\[
+u= \frac{|x|  +x}{2}\\
+v = \frac{|x|  -x}{2}
+\]</span></p>
+<p><span class="math display">\[
+\min \sum_i c_i(u_i + v_i)\\
+A(u-v) = b\\
+u,v \geq 0
+\]</span></p>
+<h3 id="约束中含有绝对值">约束中含有绝对值</h3>
+<p><span class="math display">\[
+z \geq |x + y|
+\]</span></p>
+<h2 id="乘积式">4 乘积式</h2>
+<p><span class="math display">\[
+y = x_1x_2
+\]</span></p>
+<p>线性方法一 <span class="math display">\[
+y \leq x_1 \\
+y \leq x_2 \\
+y \geq x_1 + x_2 - 1 \\
+y \in \{0,1\}
+\]</span> 线性方法二 <span class="math display">\[
+y \leq u x_1 \\
+y \leq x_2 \\
+y \geq x_1 + x_2 - 1\\
+y \in\ [0, u]
+\]</span></p>
+<h2 id="变量取值">5 变量取值</h2>
+<p><span class="math display">\[
+z \in [0,a] \ integer \ or \ z \in [a,b] \ continuous
+\]</span></p>
+<p><span class="math display">\[
+z \leq x + (1 - u)M\\
+z \geq x - (1 - u)M\\
+z \leq y + uM \\
+z \geq y - uM
+\]</span></p>
+
                 
             </div>
             <hr/>
@@ -519,7 +658,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/">https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/</a>
+                    <a href="https://xxxxlc.github.io/2021/12/02/mo-xing-chang-yong-xian-xing-hua-fang-fa/">https://xxxxlc.github.io/2021/12/02/mo-xing-chang-yong-xian-xing-hua-fang-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,7 +695,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -604,13 +747,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/12/markdown/">
+                <a href="/2021/12/05/ju-zhen-qiu-dao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="markdown写法">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="矩阵求导">
                         
-                        <span class="card-title">markdown写法</span>
+                        <span class="card-title">矩阵求导</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -621,7 +764,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-05
                         </span>
                         <span class="publish-author">
                             
@@ -630,6 +773,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -641,13 +792,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/16/start/">
+                <a href="/2021/11/29/active-set/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Start !!!">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="active-set">
                         
-                        <span class="card-title">Start !!!</span>
+                        <span class="card-title">active-set</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -658,7 +809,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-29
                             </span>
                         <span class="publish-author">
                             
@@ -671,8 +822,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mood/">
-                        <span class="chip bg-color">mood</span>
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
                     </a>
                     
                 </div>
@@ -803,6 +954,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

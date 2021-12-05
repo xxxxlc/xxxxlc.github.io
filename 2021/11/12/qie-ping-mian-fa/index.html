@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.2.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="xxxxlc" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -515,8 +515,10 @@ f(x^*) \geq \min_{x}\ \ \max(f(x_i) + \nabla^Tf(x_i)(x-x_i)) = :L_k^*
 \]</span> 式中所示的<span class="math inline">\(L_k^*\)</span> 为目前所选的参数向量 <span class="math inline">\(x_1,x_2,...,x_k\)</span> 所构成的平面的最小点，即目标函数最优解 <span class="math inline">\(x^*\)</span>的下界，<span class="math inline">\(U_k^*\)</span> 为目前所选的参数向量 <span class="math inline">\(x_1,x_2,...,x_k\)</span> 中函数值最小的点，即目标函数最优解 <span class="math inline">\(x^*\)</span>的上界 <span class="math display">\[
 U_k^* = \min(f(x_i))
 \]</span> 所谓切平面法，就是通过不断缩小上界和下界的差距来达到目标函数的最优解 <span class="math inline">\(x^*\)</span></p>
-<p>对于每一步的<span class="math inline">\(L_k^*\)</span> 可以通过以下线性规划来求解 <span class="math display">\[
-$L_k^* = \min \ L_k \\
+<p>对于每一步的<span class="math inline">\(L_k^*\)</span> 可以通过以下线性规划来求解</p>
+<h5 id="section"></h5>
+<p><span class="math display">\[
+L_k^* = \min \ L_k \\
 s.t.\  L_k \geq f(x_i) + \nabla^Tf(x_i)(x-x_i)
 \]</span> 通过简化，使得此线性规划问题更加容易求解</p>
 <p>定义以下矩阵以及向量 <span class="math display">\[

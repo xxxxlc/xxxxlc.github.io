@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo具体用法, xxxxlc">
+    <meta name="keywords" content="矩阵特征值分解及奇异值分解, xxxxlc">
     <meta name="description" content="Write Freely ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>hexo具体用法 | xxxxlc</title>
+    <title>矩阵特征值分解及奇异值分解 | xxxxlc</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -326,12 +326,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">hexo具体用法</h1>
+                    <h1 class="description center-align post-title">矩阵特征值分解及奇异值分解</h1>
                 </div>
             </div>
         </div>
@@ -450,9 +450,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/math/">
+                                <span class="chip bg-color">math</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -464,7 +468,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2021-12-05
                 </div>
                 
 
@@ -473,7 +477,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    244
                 </div>
                 
 
@@ -493,7 +497,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="矩阵特征值">矩阵特征值</h1>
+<p><span class="math display">\[
+Ax= \lambda x
+\]</span></p>
+<p>lambda 为 A 的特征值 <span class="math display">\[
+(A - \lambda I)x = 0 \\
+\Rightarrow |A-\lambda I| = 0
+\]</span> 通过行列式等于0可以解出矩阵A的特征值</p>
+<p>有以下结论 <span class="math display">\[
+\lambda_1 + \lambda_2 +...+\lambda_n = a_{11} + a_{22} + ... + a_{nn} \\
+\lambda_1 \lambda_2 ... \lambda_n = |A|
+\]</span> 通过将不同的 lambda 值回代，可以解出特征向量 x</p>
+<h1 id="矩阵奇异值分解">矩阵奇异值分解</h1>
+<h2 id="方阵分解">方阵分解</h2>
+<p><span class="math display">\[
+Ax = \lambda x \Rightarrow AU = U \Lambda
+\]</span></p>
+<p><span class="math display">\[
+A = U^{-1} \Lambda U
+\]</span></p>
+<p>对角矩阵上的值都为矩阵的特征值，U的每一列都是特征向量</p>
+<h2 id="奇异值分解">奇异值分解</h2>
+<p>当 A 不是方阵时，有 <span class="math display">\[
+A = P \Sigma Q^T
+\]</span> 首先计算 <span class="math display">\[
+AA^T
+\]</span> 得到方阵，再对此方阵进行特征值分解，计算出其特征向量，其为左奇异矩阵，将其特征值开根号代入特征矩阵 <span class="math inline">\(\Sigma\)</span> 中，其大小和 A 矩阵的大小一样，按对角线填充，没有的用0填充。</p>
+<p>再计算 <span class="math display">\[
+A^TA
+\]</span> 同理可得到特征值和右奇异矩阵</p>
+
                 
             </div>
             <hr/>
@@ -519,7 +553,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/">https://xxxxlc.github.io/2020/10/12/hexo-ju-ti-yong-fa/</a>
+                    <a href="https://xxxxlc.github.io/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/">https://xxxxlc.github.io/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,7 +590,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/math/">
+                                    <span class="chip bg-color">math</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -600,17 +638,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/10/12/markdown/">
+                <a href="/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="markdown写法">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="矩阵特征值分解及奇异值分解">
                         
-                        <span class="card-title">markdown写法</span>
+                        <span class="card-title">矩阵特征值分解及奇异值分解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -620,9 +659,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -630,6 +669,15 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -641,13 +689,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/16/start/">
+                <a href="/2021/12/05/ju-zhen-qiu-ni/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Start !!!">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="矩阵求逆">
                         
-                        <span class="card-title">Start !!!</span>
+                        <span class="card-title">矩阵求逆</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -658,7 +706,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-05
                             </span>
                         <span class="publish-author">
                             
@@ -671,8 +719,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mood/">
-                        <span class="chip bg-color">mood</span>
+                    <a href="/tags/math/">
+                        <span class="chip bg-color">math</span>
                     </a>
                     
                 </div>
@@ -803,6 +851,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

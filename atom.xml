@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2021-11-29T09:27:03.472Z</updated>
+  <updated>2021-12-05T06:52:36.870Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>矩阵特征值分解及奇异值分解</title>
+    <link href="https://xxxxlc.github.io/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/"/>
+    <id>https://xxxxlc.github.io/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/</id>
+    <published>2021-12-05T06:51:58.000Z</published>
+    <updated>2021-12-05T06:52:36.870Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;矩阵特征值&quot;&gt;矩阵特征值&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+Ax= \lambda x
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;lambda 为 A 的特征值 &lt;span class=&quot;math display&quot;&gt;\[
+(A</summary>
+        
+      
+    
+    
+    
+    
+    <category term="math" scheme="https://xxxxlc.github.io/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矩阵求逆</title>
+    <link href="https://xxxxlc.github.io/2021/12/05/ju-zhen-qiu-ni/"/>
+    <id>https://xxxxlc.github.io/2021/12/05/ju-zhen-qiu-ni/</id>
+    <published>2021-12-05T06:50:37.000Z</published>
+    <updated>2021-12-05T06:51:23.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;矩阵求逆&quot;&gt;矩阵求逆&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+AB = BA = E
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;E 为单位矩阵，那么 AB 互为逆矩阵&lt;/p&gt;
+&lt;p&gt;行列式等于0的方阵不可逆 &lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="math" scheme="https://xxxxlc.github.io/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矩阵求导</title>
+    <link href="https://xxxxlc.github.io/2021/12/05/ju-zhen-qiu-dao/"/>
+    <id>https://xxxxlc.github.io/2021/12/05/ju-zhen-qiu-dao/</id>
+    <published>2021-12-05T06:48:59.000Z</published>
+    <updated>2021-12-05T06:50:01.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;矩阵求导&quot;&gt;矩阵求导&lt;/h1&gt;
+&lt;p&gt;公式一 &lt;span class=&quot;math display&quot;&gt;\[
+\frac{\partial (x^Ta)}{\partial x} = \frac{\partial (a^Tx)}{\partial x} =</summary>
+        
+      
+    
+    
+    
+    
+    <category term="math" scheme="https://xxxxlc.github.io/tags/math/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>模型常用线性化方法</title>
+    <link href="https://xxxxlc.github.io/2021/12/02/mo-xing-chang-yong-xian-xing-hua-fang-fa/"/>
+    <id>https://xxxxlc.github.io/2021/12/02/mo-xing-chang-yong-xian-xing-hua-fang-fa/</id>
+    <published>2021-12-02T08:15:09.000Z</published>
+    <updated>2021-12-02T11:57:22.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;模型常用线性化方法&quot;&gt;模型常用线性化方法&lt;/h1&gt;
+&lt;h2 id=&quot;maxmin&quot;&gt;1 max/min&lt;/h2&gt;
+&lt;p&gt;令 &lt;span class=&quot;math display&quot;&gt;\[
+z = \max (x, y)
+\]&lt;/span&gt; 该约束可等价为以下两个约束</summary>
+        
+      
+    
+    
+    
+    
+    <category term="algorithm" scheme="https://xxxxlc.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>active-set</title>
@@ -99,7 +207,7 @@ Ax =</summary>
     <link href="https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/"/>
     <id>https://xxxxlc.github.io/2021/11/12/qie-ping-mian-fa/</id>
     <published>2021-11-12T01:38:17.000Z</published>
-    <updated>2021-11-12T02:43:08.861Z</updated>
+    <updated>2021-12-03T02:17:35.319Z</updated>
     
     
       
