@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2022-01-17T08:39:36.680Z</updated>
+  <updated>2022-01-17T08:53:54.266Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://xxxxlc.github.io/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/"/>
     <id>https://xxxxlc.github.io/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/</id>
     <published>2022-01-17T08:15:30.000Z</published>
-    <updated>2022-01-17T08:39:36.680Z</updated>
+    <updated>2022-01-17T08:53:54.266Z</updated>
     
     
       
@@ -29,8 +29,7 @@
         
         
     <summary type="html">&lt;p&gt;采用贝叶斯定理 &lt;span class=&quot;math display&quot;&gt;\[
-P(y|\boldsymbol{x}) = \frac{P(\boldsymbol{x}|y)P(y)}{P(\boldsymbol{x})}
-\]&lt;/span&gt; &lt;img</summary>
+P(y|\boldsymbol{x}) =</summary>
         
       
     
