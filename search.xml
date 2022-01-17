@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>贝叶斯分类器理论基础</title>
+      <link href="/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/"/>
+      <url>/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/</url>
+      
+        <content type="html"><![CDATA[<p>采用贝叶斯定理 <span class="math display">\[P(y|\boldsymbol{x}) = \frac{P(\boldsymbol{x}|y)P(y)}{P(\boldsymbol{x})}\]</span></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> math </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>矩阵特征值分解及奇异值分解</title>
       <link href="/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/"/>
       <url>/2021/12/05/ju-zhen-te-zheng-zhi-fen-jie-ji-qi-yi-zhi-fen-jie/</url>
