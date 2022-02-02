@@ -324,9 +324,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -460,7 +458,28 @@
                 </div>
 
                 <div class="introduction center-align" data-aos="fade-up">所谓无底深渊，下去，也是前程万里</div>
-                <h2>Hi, I'm xxxxlc!<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+                <div class="card">
+                    <center>
+                        <h2 >Hi, I'm xxxxlc!<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+                        <p>
+                            <em>
+                                Master at <a target="_blank" rel="noopener" href="http://www.ipc.ac.cn/">TIPC of CAS</a><img src="https://media.giphy.com/media/fYSnHlufseco8Fh93Z/giphy.gif" width="30">
+                            </em>
+                            
+                        </p>
+                    </center>
+                    <div>
+                        <div style="text-align: center;">
+                            <img style="text-align: center;" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="180">
+                            <img src="https://media4.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=790b7611f9f7641cff59b9bcf4201765b9fec8307e3ee080&rid=giphy.gif&ct=g" width="180">
+                            
+                        </div>
+                    </div>
+    
+                </div>
+                <div>
+                    
+                </div>
                 <style type="text/css">
     #posts-chart,
     #categories-chart,
@@ -510,7 +529,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01"]
+            data: ["2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02"]
         },
         yAxis: {
             type: 'value',
@@ -520,7 +539,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,3,1,2,1,4,4,1],
+                data: [0,0,0,0,0,3,1,2,1,4,4,1,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -643,65 +662,6 @@
                 
 
                 
-                
-<div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
-    </div>
-    <div class="row">
-        
-    </div>
-
-    
-
-    
-    <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
-        <div class="tag-chips center-align">
-            
-            
-            <a href="/tags/MATLAB/">
-                <span class="chip center-align waves-effect waves-light chip-default">MATLAB</span>
-            </a>
-            
-            
-            
-            <a href="/tags/mood/">
-                <span class="chip center-align waves-effect waves-light chip-default">mood</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Software-Installation/">
-                <span class="chip center-align waves-effect waves-light chip-default">Software Installation</span>
-            </a>
-            
-            
-            
-            <a href="/tags/algorithm/">
-                <span class="chip center-align waves-effect waves-light chip-default">algorithm</span>
-            </a>
-            
-            
-            
-            <a href="/tags/math/">
-                <span class="chip center-align waves-effect waves-light chip-default">math</span>
-            </a>
-            
-            
-            
-            <a href="/tags/reading-note/">
-                <span class="chip center-align waves-effect waves-light chip-default">reading note</span>
-            </a>
-            
-            
-        </div>
-    </div>
-    
-
-</div>
-
-                
 
                 
                 
@@ -785,8 +745,6 @@
             
             
             
-                
-            
             
                 <span id="busuanzi_container_site_pv">
                 &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
@@ -806,7 +764,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div class="col s12 m4 l4 social-link ">
     <a href="https://github.com/xxxxlc" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -984,8 +942,6 @@ $(function () {
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     

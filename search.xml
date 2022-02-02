@@ -8,7 +8,7 @@
       <link href="/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/"/>
       <url>/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/</url>
       
-        <content type="html"><![CDATA[<p>采用贝叶斯定理 <span class="math display">\[P(y|\boldsymbol{x}) = \frac{P(\boldsymbol{x}|y)P(y)}{P(\boldsymbol{x})}\]</span></p><figure><img src="https://www.notion.so/de1bcb7b4743496298ba925fbe113460#4353d6b81b19430d9e1dc4f9ccbd1c4f" alt="111"><figcaption aria-hidden="true">111</figcaption></figure>]]></content>
+        <content type="html"><![CDATA[<p>采用贝叶斯定理 <span class="math display">\[P(y|\boldsymbol{x}) = \frac{P(\boldsymbol{x}|y)P(y)}{P(\boldsymbol{x})}\]</span></p><p>其中，</p><ul><li><strong>P(y)</strong> ：称为y的先验概率，“先验”是因为它不考虑x因素</li><li><strong>P(y|x) </strong>：是已知x发生后y的条件概率，称作y的后验概率</li><li><strong>P(x|y)</strong>：是已知y发生后x的条件概率，称为x的后验概率，也被称为==似然度==</li><li><strong>P(x)</strong>：称为x的先验概率</li><li><strong>P(x|y)/P(x)</strong>：称为标准似然度</li></ul><p>==朴素贝叶斯分类器：假设各个事件之间条件独立，即属性条件独立性假设== <span class="math display">\[P(\boldsymbol{x}|y) = \prod_{j=1}^{n}P(x_j|y)\]</span> 那么贝叶斯公式可以根据属性条件独立性假设重写为： <span class="math display">\[P(y|\boldsymbol{x}) = \frac{P(y)\prod_{j=1}^{n}P(x_j|y)}{P(\boldsymbol{x})}\]</span> 对于每个独立事件<strong>yi</strong>来说分母<strong>P(x)</strong>是相同的，因此朴素贝叶斯分类器的判定准则只取分子部分，即 <span class="math display">\[y^*(\boldsymbol{x})=\arg \max P(y_i) \prod_{j=1}^{n} P(x_j|y_i)\]</span> 该式称为最大后验概率决策规则</p>]]></content>
       
       
       
