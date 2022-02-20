@@ -433,7 +433,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    952
+                    1.5k
                 </div>
                 
 
@@ -463,7 +463,7 @@ P(y|\boldsymbol{x}) = \frac{P(\boldsymbol{x}|y)P(y)}{P(\boldsymbol{x})}
 <ul>
 <li>P(y) ：称为y的先验概率，“先验”是因为它不考虑x因素</li>
 <li>P(y|x) ：是已知x发生后y的条件概率，称作y的后验概率</li>
-<li>P(x|y)：是已知y发生后x的条件概率，称为x的后验概率，也被称为==似然度==</li>
+<li>P(x|y)：是已知y发生后x的条件概率，称为x的后验概率，也被称为似然度</li>
 <li>P(x)：称为x的先验概率</li>
 <li>P(x|y)/P(x)：称为标准似然度</li>
 </ul>
@@ -490,7 +490,7 @@ y^*(\boldsymbol{x})=\arg \max P(y_i) \prod_{j=1}^{n} P(x_j|y_i)
 <p>先验概率： <span class="math display">\[
 \hat{P}(y_i) = \frac{N_i}{N}
 \]</span> 条件概率： <span class="math display">\[
-\hat{P}(x_i|y_i) = \frac{N_{ij}}{N_i}
+\hat{P}(x_j|y_i) = \frac{N_{ij}}{N_i}
 \]</span></p>
 <h3 id="拉普拉斯平滑">拉普拉斯平滑</h3>
 <p>为了避免其他特征的信息被未收集到的特征值“抹去”（该事件未发生，导致该事件的条件概率为0），在估计概率值时进行“平滑”，常用拉普拉斯平滑先验概率和条件概率。</p>
@@ -503,7 +503,7 @@ y^*(\boldsymbol{x})=\arg \max P(y_i) \prod_{j=1}^{n} P(x_j|y_i)
 <li>K：类别yi的个数</li>
 </ul>
 <p>条件概率： <span class="math display">\[
-\hat{P}(x_i|y_i) = \frac{N_{ij}+1}{N_i + S_j}
+\hat{P}(x_j|y_i) = \frac{N_{ij}+1}{N_i + S_j}
 \]</span> 其中</p>
 <ul>
 <li>Nij：标记为yi的样本中特征为xi的样本数</li>
@@ -516,8 +516,37 @@ y^*(\boldsymbol{x})=\arg \max P(y_i) \prod_{j=1}^{n} P(x_j|y_i)
 <h3 id="高斯朴素贝叶斯">高斯朴素贝叶斯</h3>
 <p>对于连续变量，考虑最多的是高斯朴素贝叶斯</p>
 <p>对于连续变量事件来说，假设每一个事件发生的条件概率服从正太分布， <span class="math display">\[
-p(x_i|y_i) = \frac{1}{\sqrt{2\pi}\sigma_{y_i,i}}\exp{(-\frac{(x_i-\mu_{y_i,i})^2}{2\sigma_{y_i,i}^2})}
+p(x_i|y_j) = \frac{1}{\sqrt{2\pi}\sigma_{y_j,i}}\exp{(-\frac{(x_i-\mu_{y_j,i})^2}{2\sigma_{y_j,i}^2})}
 \]</span> 其中方差和均值都是是标签为yi类在第i个属性上取值的方差和均值</p>
+<h1 id="半朴素贝叶斯分类器">半朴素贝叶斯分类器</h1>
+<p>朴素贝叶斯的”属性条件独立性假设“在现实中难以实现，所以尝试对这一假设做一定程度的放松，，由此产生了半朴素贝叶斯分类器（semi-naive Bayes classifier）</p>
+<p>半朴素贝叶斯分类器的基本思想是适当的考虑一部分属性之间的相互依赖关系，采用了”独依赖估计“策略，就是假设每个属性在类别之外最多仅依赖一个属性： <span class="math display">\[
+P(y_c|\boldsymbol{x}) \propto P(y_c) \prod_{i=1}^d P(x_i|y_c, pa_i)
+\]</span> 这个pai为xi的父属性，问题的关键就转化为如何确定每个特征的父属性。</p>
+<h2 id="spone-model">SPONE model</h2>
+<p>SPONE（Super-Parent ODE）是假设所有属性都依赖同一个属性，该属性称为”超父“，该”超父“属性是通过交叉验证等模型确定。</p>
+<figure>
+<img src="/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/image-20220220221300025.png" alt="image-20220220221300025"><figcaption aria-hidden="true">image-20220220221300025</figcaption>
+</figure>
+<h2 id="tan-model">TAN model</h2>
+<p>TAN 模型则是在最大生成树算法基础下，将属性之间的依赖关系使用树结构表示</p>
+<h2 id="aode-model">AODE model</h2>
+<p>AODE(Average One-Dependent Estimator)是一种基于集成学习机制的独依赖分类器，AODE尝试将每个属性作为超父来构建SPONE，即 <span class="math display">\[
+P(y_c|\boldsymbol{x}) \propto \sum_{i=1}^{d} \  P(y_c, x_i) \prod_{j=1}^d P(x_i|y_c, x_j)
+\]</span></p>
+<p><span class="math display">\[
+\hat{P}(y_c, x_i) = \frac{|D_{y_c,x_i}| + 1}{|D| + N_i}
+\]</span></p>
+<p><span class="math display">\[
+\hat{P}(x_j|y_c, x_i) = \frac{|D_{y_c,x_i,x_j}| + 1}{|D_{y_c,x_i}| + N_j}
+\]</span></p>
+<ul>
+<li>Ni：第i个属性可能的取值数</li>
+<li>Dycxi：是类别为yc，同时第i个属性为xi的样本集合</li>
+<li>Dycxixj：类被为yc，同时第i个属性为xi，第j个属性为xj的样本集合</li>
+</ul>
+<h1 id="贝叶斯网">贝叶斯网</h1>
+<p>简单来说，在网络结构基础下使用联合概率分布来刻画属性之间的依赖关系，比半朴素贝叶斯分类器更加符合属性之间的依赖情况，但是属性之间的贝叶斯网络结构往往未知，需要训练数据集得到最佳的贝叶斯网络结构，网络结构及联合分布概率都是基于训练集数据得到的。</p>
 
                 
             </div>
