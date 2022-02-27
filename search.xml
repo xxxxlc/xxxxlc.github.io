@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>LDA 线性判别分析</title>
+      <link href="/2022/02/26/lda-xian-xing-pan-bie-fen-xi/"/>
+      <url>/2022/02/26/lda-xian-xing-pan-bie-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="lda-线性判别分析">LDA 线性判别分析</h1><p>线性判别分析（Liner Discrimminant Analysis）：将样本投影到一条直线上，使得同类别的投影点的距离尽可能近，不同类别的投影点尽可能远。对于新样本来说，将其同样投影到这一条直线上，根据投影位置判断其样本类别。</p><p><img src="/2022/02/26/lda-xian-xing-pan-bie-fen-xi/image-20220226215420292.png" alt="image-20220226215420292" style="zoom:50%;"> <span class="math display">\[\left\{ \begin{array}{l}D\{x_i, y_i\} &amp; 数据集\\X_i &amp; 集合 \\\mu_i &amp; 均值 \\\Sigma_i &amp; 协方差矩阵\end{array}\right.\]</span> 其中i代表标签类别i</p><p>将所有样本投影到直线： <span class="math display">\[y = \boldsymbol{\omega}^T\boldsymbol{x}\]</span> ## LDA二分类理论推导</p><p>考虑二分类问题，y属于0和1两种类别，将样本按照标签的类别分为两类，则两类样本的中心在直线上的投影分别为 <span class="math display">\[\left\{ \begin{array}{l}\boldsymbol{\omega}^T\boldsymbol{\mu_0} \\ \boldsymbol{\omega}^T\boldsymbol{\mu_1}\end{array}\right.\]</span> 如果将两类样本全部投影到该直线上，其协方差分别为： <span class="math display">\[\left\{ \begin{array}{l}\boldsymbol{\omega}^T\boldsymbol{\Sigma_0}\boldsymbol{\omega} \\ \boldsymbol{\omega}^T\boldsymbol{\Sigma_1}\boldsymbol{\omega}\end{array}\right.\]</span> 线性判别分析原理是使得同一类样本在该直线的投影尽量近，不同类别的样本尽量远，即两类样本中心距离尽量大， 每个样本的协方差尽量小，所以创建最大化目标为： <span class="math display">\[J = \frac{\|\boldsymbol{\omega}^T\boldsymbol{\mu_0} - \boldsymbol{\omega}^T\boldsymbol{\mu_1}\|_2^2}{\boldsymbol{\omega}^T\boldsymbol{\Sigma_0}\boldsymbol{\omega}+\boldsymbol{\omega}^T\boldsymbol{\Sigma_1}\boldsymbol{\omega}}=\frac{\boldsymbol{\omega}^T(\boldsymbol{\mu_0}-\boldsymbol{\mu_1})(\boldsymbol{\mu_0}-\boldsymbol{\mu_1})^T\boldsymbol{\omega}}{\boldsymbol{\omega}^T(\boldsymbol{\Sigma_0}+\boldsymbol{\Sigma_1})\boldsymbol{\omega}}\]</span> 为了方便书写和提取数据特征</p><p>定义“类内散度矩阵”： <span class="math display">\[S_w = \Sigma_0 + \Sigma_1 = \sum_{x \in X_0}(\boldsymbol{x} - \boldsymbol{\mu_0})(\boldsymbol{x} - \boldsymbol{\mu_0})^T + \sum_{x \in X_1}(\boldsymbol{x} - \boldsymbol{\mu_1})(\boldsymbol{x} - \boldsymbol{\mu_1})^T\]</span> 定义“类间散度矩阵” <span class="math display">\[S_b = (\boldsymbol{\mu_0}-\boldsymbol{\mu_1})(\boldsymbol{\mu_0}-\boldsymbol{\mu_1})^T\]</span> 则最大化目标可以重写为： <span class="math display">\[J =\frac{\boldsymbol{\omega}^TS_b\boldsymbol{\omega}}{\boldsymbol{\omega}^TS_w\boldsymbol{\omega}}\]</span> 该式分子分母都是w的二次项，所以该最大化目标关于w的解与w的长度没有关系，于是为了简化计算，可以做出以下假设： <span class="math display">\[\boldsymbol{\omega}^TS_w\boldsymbol{\omega} = 1\]</span> 所以得到以下一个优化问题： <span class="math display">\[\min -\boldsymbol{\omega}^TS_b\boldsymbol{\omega} \\s.t. \ \ \boldsymbol{\omega}^TS_w\boldsymbol{\omega} = 1\]</span> 由拉格朗日乘子法可得 <span class="math display">\[\min -\boldsymbol{\omega}^TS_b\boldsymbol{\omega} + \lambda (\boldsymbol{\omega}^TS_w\boldsymbol{\omega} - 1) \\\Rightarrow -S_b\boldsymbol{\omega} + \lambda S_w\boldsymbol{\omega} = 0\]</span> 又因为 <span class="math display">\[S_b\boldsymbol{\omega} =(\boldsymbol{\mu_0}-\boldsymbol{\mu_1})(\boldsymbol{\mu_0}-\boldsymbol{\mu_1})^T \boldsymbol{\omega}\]</span> 因为后两项的乘积为一个实数，所以Sb的方向只与第一项有关，所以令 <span class="math display">\[S_b\boldsymbol{\omega} = \lambda (\boldsymbol{\mu_0}-\boldsymbol{\mu_1})\]</span> 结合(11)，可得 <span class="math display">\[\boldsymbol{\omega} = S_b^{-1}\lambda (\boldsymbol{\mu_0}-\boldsymbol{\mu_1})\]</span></p><h2 id="lda多分类理论推导">LDA多分类理论推导</h2><p>假设存在N个类，第i类样本数为表示为mi</p><p>首先定义”全局散度矩阵“，即所有点的散度聚合情况 <span class="math display">\[S_t = S_w + S_b =\sum_{i=1}^m(\boldsymbol{x_i} - \boldsymbol{\mu})(\boldsymbol{x_i} - \boldsymbol{\mu})^T\]</span> 其中类内散度矩阵重定义为每个类别的类内散度矩阵之和： <span class="math display">\[S_w = \sum_{i=1}^{N} S_{wi}=\sum_{i=1}^{N}\sum_{x \in X_i}(\boldsymbol{x} - \boldsymbol{\mu_i})(\boldsymbol{x} - \boldsymbol{\mu_i})^T\]</span> 则类间矩阵可以用全局散度矩阵和类内散度矩阵表示： <span class="math display">\[S_b = S_t - S_w =\sum_{i=1}^{N} m_i (\boldsymbol{\mu_i} - \boldsymbol{\mu})(\boldsymbol{\mu_i} - \boldsymbol{\mu}) ^T\]</span> 对于多分类问题，一种常用的优化目标为： <span class="math display">\[\max_{W} \frac{\tr (W^TS_bW)}{\tr (W^TS_wW)}\]</span> 求(29)的广义特征值问题： <span class="math display">\[S_bW = \lambda S_wW \\\]</span></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>贝叶斯分类器理论基础</title>
       <link href="/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/"/>
       <url>/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/</url>
@@ -14,7 +33,7 @@
       
         <tags>
             
-            <tag> math </tag>
+            <tag> machine learning </tag>
             
         </tags>
       

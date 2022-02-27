@@ -6,7 +6,7 @@
   <link href="https://xxxxlc.github.io/atom.xml" rel="self"/>
   
   <link href="https://xxxxlc.github.io/"/>
-  <updated>2022-02-20T14:25:00.826Z</updated>
+  <updated>2022-02-27T11:31:40.518Z</updated>
   <id>https://xxxxlc.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LDA 线性判别分析</title>
+    <link href="https://xxxxlc.github.io/2022/02/26/lda-xian-xing-pan-bie-fen-xi/"/>
+    <id>https://xxxxlc.github.io/2022/02/26/lda-xian-xing-pan-bie-fen-xi/</id>
+    <published>2022-02-26T12:58:55.000Z</published>
+    <updated>2022-02-27T11:31:40.518Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;lda-线性判别分析&quot;&gt;LDA 线性判别分析&lt;/h1&gt;
+&lt;p&gt;线性判别分析（Liner Discrimminant</summary>
+        
+      
+    
+    
+    
+    
+    <category term="machine learning" scheme="https://xxxxlc.github.io/tags/machine-learning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>贝叶斯分类器理论基础</title>
     <link href="https://xxxxlc.github.io/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/"/>
     <id>https://xxxxlc.github.io/2022/01/17/bei-xie-si-fen-lei-qi-li-lun-ji-chu/</id>
     <published>2022-01-17T08:15:30.000Z</published>
-    <updated>2022-02-20T14:25:00.826Z</updated>
+    <updated>2022-02-26T13:00:25.117Z</updated>
     
     
       
@@ -36,7 +60,7 @@
     
     
     
-    <category term="math" scheme="https://xxxxlc.github.io/tags/math/"/>
+    <category term="machine learning" scheme="https://xxxxlc.github.io/tags/machine-learning/"/>
     
   </entry>
   
